@@ -5,55 +5,34 @@ draft: false
 tags : [VSTFS2015, devops, IIS]
 ---
 
-Many clients I visit are still not on the cloud and are still not using VSTS (Visual Studio Team Services) online and Azure.  
-  
+Many clients I visit are still not on the cloud and are still not using VSTS (Visual Studio Team Services) online and Azure.
+
 Meaning, they still have on premise infrastructure for their applications. Now, I don't want this blog post to turn into a defence of cloud (more specifically PaaS). Rather, I want to quickly show you how you can setup a CI/CD/CD  (Continuous Integration/Delivery/Deployment) delivery pipeline with an on-premise instance of VSTFS 2015 deploying to machines with IIS .  
   
 Basically, if you're still on premise! It's not an excuse to disregard DevOps practices!!  
-  
-  
 
-### Build
-
+## Build
 The first step is to setup your builds. To do this navigate to the build tab in your Visual Studio Team Foundation Server 2015 collection and create a new build definition:
 
-  
-
 [![](https://1.bp.blogspot.com/-nvPiSNeZ9ZM/V56NpxUuUSI/AAAAAAAAKkg/vx9_hYa2wBYqYfCb3DxneGYjTu7IsDapQCLcB/s640/2016-08-01%2B09_44_41-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://1.bp.blogspot.com/-nvPiSNeZ9ZM/V56NpxUuUSI/AAAAAAAAKkg/vx9_hYa2wBYqYfCb3DxneGYjTu7IsDapQCLcB/s1600/2016-08-01%2B09_44_41-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)
-
-  
 
 Follow the wizard and be sure to **tick the box 'Continuous Integration'**. By ticking this box you ensure that on every commit (or checkin if you're using TFS-VC) your code will compile.
 
 [![](https://4.bp.blogspot.com/-BHW4n9BP5qg/V56OWeEVdWI/AAAAAAAAKks/-Fum6z9Agn0gIevJw_x151yEhmKgpfW9wCLcB/s400/2016-08-01%2B09_48_31-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://4.bp.blogspot.com/-BHW4n9BP5qg/V56OWeEVdWI/AAAAAAAAKks/-Fum6z9Agn0gIevJw_x151yEhmKgpfW9wCLcB/s1600/2016-08-01%2B09_48_31-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)
 
-  
-
-  
-
 [![](https://4.bp.blogspot.com/-MpxYw7rnuiI/V56OKKHfH0I/AAAAAAAAKkk/VITNnKiicfM-UETcPDik11bJKKn1kIkRwCLcB/s400/2016-08-01%2B09_47_26-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.png)](https://4.bp.blogspot.com/-MpxYw7rnuiI/V56OKKHfH0I/AAAAAAAAKkk/VITNnKiicfM-UETcPDik11bJKKn1kIkRwCLcB/s1600/2016-08-01%2B09_47_26-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.png)
-
-  
-
-  
 
 In the 'NuGet restore' and 'Build Solution' steps. Be sure to explicitly specify the solution file. In the 'Build Solution' step. Enter the following msbuild.exe argument: **'/p:DeployOnBuild=true /p:WebPublishMethod=Package  /p:PackageLocation=$(build.stagingDirectory)'. **
 
 [![](https://3.bp.blogspot.com/-VXagVAPh65I/V574fXZ1csI/AAAAAAAAKng/ow7eBwMtEQ4-WXgQwWNf3X4qqImAjk3IQCLcB/s640/2016-08-01%2B17_21_12-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://3.bp.blogspot.com/-VXagVAPh65I/V574fXZ1csI/AAAAAAAAKng/ow7eBwMtEQ4-WXgQwWNf3X4qqImAjk3IQCLcB/s1600/2016-08-01%2B17_21_12-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)
 
-  
-
-  
-
 Save the build definition and trigger a build
-
-  
 
 [![](https://2.bp.blogspot.com/-JYrjxetkqzI/V56errt2_uI/AAAAAAAAKlI/Zd0DdaEZaY8nat87FykxAAnGrCQzbK1FwCLcB/s640/2016-08-01%2B10_58_13-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://2.bp.blogspot.com/-JYrjxetkqzI/V56errt2_uI/AAAAAAAAKlI/Zd0DdaEZaY8nat87FykxAAnGrCQzbK1FwCLcB/s1600/2016-08-01%2B10_58_13-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg)
 
   
 
-### Install Relevant VSIX extentions
+## Install Relevant VSIX extentions
 
 On your VSTFS2015 instance you will need to install some extensions. These are the IIS Extensions and can be found here:
 
@@ -61,7 +40,7 @@ On your VSTFS2015 instance you will need to install some extensions. These are t
 
 https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.iiswebapp
 
-### Release
+## Release
 
 Go to the release tab and create a new 'Release Definition'. Follow the wizard and be sure to tick 'Continuous Deployment'
 
@@ -71,29 +50,16 @@ Go to the release tab and create a new 'Release Definition'. Follow the wizard a
 
 [![](https://1.bp.blogspot.com/-ULbPaAto89A/V56m-9DhVXI/AAAAAAAAKlY/O4Wk6Nd9YLEgd9Mf8szVzofD2p8KuzUkQCLcB/s320/2016-08-01%2B11_32_51-Explorer%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://1.bp.blogspot.com/-ULbPaAto89A/V56m-9DhVXI/AAAAAAAAKlY/O4Wk6Nd9YLEgd9Mf8szVzofD2p8KuzUkQCLcB/s1600/2016-08-01%2B11_32_51-Explorer%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg)
 
-  
-
-  
-
 If your artifacts have not linked. Be sure to go to the artifact tab and link your artifact from the build definition we just created.
-
-  
 
 [![](https://2.bp.blogspot.com/-fi0I0twlBlA/V56ngzqhkmI/AAAAAAAAKlg/VWv_P1uYMxwnRhueQpTwuNkokq9R3BnSwCLcB/s640/2016-08-01%2B11_35_55-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://2.bp.blogspot.com/-fi0I0twlBlA/V56ngzqhkmI/AAAAAAAAKlg/VWv_P1uYMxwnRhueQpTwuNkokq9R3BnSwCLcB/s1600/2016-08-01%2B11_35_55-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg)
 
-  
-
-  
 
 Go to the environment tabs and add 3 tasks
 
-1\. Copy Windows Machine File Copy
-
-2\. WinRM - IIS Web App Management
-
-3\. WinRM - IIS Web App Deployment
-
-  
+1. Copy Windows Machine File Copy
+2. WinRM - IIS Web App Management
+3. WinRM - IIS Web App Deployment
 
 #### [![](https://4.bp.blogspot.com/-r6HaR1w5NlE/V56pF3q4Q5I/AAAAAAAAKlw/rqpae0_wmAUojeowukuanHK8P0sBFgG4QCLcB/s640/2016-08-01%2B11_41_36-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg)](https://4.bp.blogspot.com/-r6HaR1w5NlE/V56pF3q4Q5I/AAAAAAAAKlw/rqpae0_wmAUojeowukuanHK8P0sBFgG4QCLcB/s1600/2016-08-01%2B11_41_36-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg)  
   
@@ -146,7 +112,7 @@ Likewise in the last step. All the variables have already been set as part of th
 
   
 
-### Setting release conditions for Continuous Deployment
+## Setting release conditions for Continuous Deployment
 
 The final step is setting the release conditions for continuous deployment.
 

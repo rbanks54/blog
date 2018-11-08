@@ -7,8 +7,8 @@ tags : [reflection, language]
 
 I've written previously about some language that I'm actively trying to change in my day-to-day dealings with people, I write these blog posts because they hold me public accountable to my peers, friends, and family. My previous posts were:
 
-[It Depends](https://blog.raph.ws/2018/07/it-depends.html)  
-[I Don't Know](https://blog.raph.ws/2018/01/i-dont-know.html)  
+[It Depends](https://blog.raph.ws/2018/07/it-depends.html)
+[I Don't Know](https://blog.raph.ws/2018/01/i-dont-know.html)
 
 
 [![](https://2.bp.blogspot.com/-CZ1uIVrN8gg/W4yvhXgoRPI/AAAAAAAAT6s/9k11-nlSkUYm1TgHKp65cAb8c_qrJs8IgCLcBGAs/s200/2018-09-03%2B13_50_03-https___upload.wikimedia.org_wikipedia_commons_a_a8_247-man-shrugging-2.svg.png)](https://2.bp.blogspot.com/-CZ1uIVrN8gg/W4yvhXgoRPI/AAAAAAAAT6s/9k11-nlSkUYm1TgHKp65cAb8c_qrJs8IgCLcBGAs/s1600/2018-09-03%2B13_50_03-https___upload.wikimedia.org_wikipedia_commons_a_a8_247-man-shrugging-2.svg.png)
@@ -30,5 +30,5 @@ Instead of saying “yeah?”, what I’ll try to do is either pause and wait fo
 
 ## Conclussion
 Both the phrases above have a common theme. That is, me not having the humility to recognise that I could be completely wrong about something and rushing to conclusions without regarding others. Whilst I will be focusing on my speech, it is not so much the phrases, but rather my approach that I’m looking to change and I hope that this will be externalised in my speech.  
-  
+
 Thanks for reading.

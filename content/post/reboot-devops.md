@@ -32,14 +32,13 @@ An insufficient test suite is something that has nothing to do with infrastructu
 3.  Speed of execution
 4.  User simulated coverage (usually done through slower 'UI Tests')
 
-  
 There is not one size fits all for test suites. So I'm not going to preach on test coverage metrics, the percentage of unit, integration, or UI tests. Instead, I'd encourage you to ask yourself the following questions:  
 
 
--   How _confident_ are we that our quicker-running tests provide enough coverage?
--   How _confident_ are we that our test suite is maintainable for the future?
--   How _confident_ are we that we can measure coverage metrics across and within the test suite?
--   How _confident_ are we that we can run a subset of tests on a live environment without the need for manual testing?
+- How _confident_ are we that our quicker-running tests provide enough coverage?
+- How _confident_ are we that our test suite is maintainable for the future?
+- How _confident_ are we that we can measure coverage metrics across and within the test suite?
+- How _confident_ are we that we can run a subset of tests on a live environment without the need for manual testing?
 
 Like automated testing, application resilience also has little to do with infrastructure, networking, or release pipelines. Whether we have a microservice or monolithic architecture, our application has to be resilient. If our application is reliant on external storage, caching services, or external APIs. If any of these dependencies are down, the whole application must not crash completely. It must be resilient enough to still operate in the areas that don't require those dependencies. 
 

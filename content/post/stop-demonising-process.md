@@ -5,8 +5,7 @@ draft: false
 tags : [team work, agile]
 ---
 
-All too often people appeal to being "Agile" as a way to avoid following or having process. It could be because the term "Agile" implies flexibility or even because the Agile Manifesto itself says explicitly that "Individuals and interactions over processes and tools". Here, the manifesto doesn't say that being "Agile" doesn't mean you don't have process, it simply says you favour individuals over process. The demonisation of process could also be a knee jerk reaction of when teams had process imposed on them.  
-  
+All too often people appeal to being "Agile" as a way to avoid following or having process. It could be because the term "Agile" implies flexibility or even because the Agile Manifesto itself says explicitly that "Individuals and interactions over processes and tools". Here, the manifesto doesn't say that being "Agile" doesn't mean you don't have process, it simply says you favour individuals over process. The demonisation of process could also be a knee jerk reaction of when teams had process imposed on them.
 
 [![](https://3.bp.blogspot.com/-iPW_9gh5-9A/WygxbxdR6iI/AAAAAAAAR70/S29EAEDhGxYyEZv2HzZhFQdUyMBhFAcEwCLcBGAs/s320/hqdefault%255B1%255D.jpg)](https://3.bp.blogspot.com/-iPW_9gh5-9A/WygxbxdR6iI/AAAAAAAAR70/S29EAEDhGxYyEZv2HzZhFQdUyMBhFAcEwCLcBGAs/s1600/hqdefault%255B1%255D.jpg)
 

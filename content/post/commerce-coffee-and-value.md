@@ -10,11 +10,8 @@ According to Wikipedia, commerce is the exchange of goods and services that exis
 As humans we've learnt that this is the way we exchange _value_. When I go to a particular coffee shop on a Saturday it's because I judge that the value in the coffee given to me is better than the shop next door. I may even be willing to pay a little extra depending on the value provided. In this case, the value is the extent to which my taste buds are excited from the coffee.  
 
 [![](https://4.bp.blogspot.com/-mH_gegJo07w/WtQXKlRNSdI/AAAAAAAARdw/5z-m2cWNDPYHQVshWQw0NqfdTTyR5whdACLcBGAs/s320/DUFMiLDXcAEytUs%255B1%255D.jpg)](https://4.bp.blogspot.com/-mH_gegJo07w/WtQXKlRNSdI/AAAAAAAARdw/5z-m2cWNDPYHQVshWQw0NqfdTTyR5whdACLcBGAs/s1600/DUFMiLDXcAEytUs%255B1%255D.jpg)
+*An Espresso*
 
-An Espresso
-
-  
-  
 Buying a coffee is a transaction. I pay my few dollars then get a coffee in return. Software delivery is a bit different. To deal with custom Software as a transaction is not only hard, it's also counter-intuitive. We've all come across the cliche of _spending hundreds of thousands of dollars on a technically brilliant software product that no one uses._  
 If you deem the value in a product is delivering a technically brilliant bit of Software that satisfies requirements on a spreadsheet. Then you may be able to conduct business using this transaction mentality, but be warned this is neither effective nor is it conducive to _real value_. Lean thinking and hypothesis driven development is a bit different than traditional commerce. As the cool kids say _it's_ _a bit meta_ .  
   

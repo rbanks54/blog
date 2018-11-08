@@ -14,8 +14,7 @@ Pragmatism and quality are two things that are often pitted against each other w
 
 At times we need to strike a balance between quality and delivery. This is called pragmatism. The art of striking this balance is difficult. Each software engineer’s experience is different, many engineers have been burnt by similar things. Some have been burnt by different things. As a team, it’s hard to be pragmatic because of these varying experiences.  
 
-Deciding which aspects of quality to keep and which to remove must be based on a series of other questions and driven by factors which include:  the demography of users, expected modifications, and composition of the team. Achieving pragmatism is about asking the right questions to help us make the right decisions.  
-  
+Deciding which aspects of quality to keep and which to remove must be based on a series of other questions and driven by factors which include:  the demography of users, expected modifications, and composition of the team. Achieving pragmatism is about asking the right questions to help us make the right decisions.
 
 ## User Demography
 ### Volume of users
@@ -49,7 +48,7 @@ Like other situations, it's important here to ask the right questions. For examp
 
 ## Nature of the Development Team
 The composition and nature of your development team can also affect certain decisions. For example if the nature of the team is one filled with contractors coming in and out, we may need to increase the effort and value that's placed upon documentation.  
-  
+
 Monitoring and notifications may have to increase if the composition of the development team is unstable. We may need to increase the breadth of who is notified in order that issues are raised to the relevant people quicker. These are just some considerations to take when developing with quality in mind in relation to the nature and composition of the development team.  
 
 ## Conclusion

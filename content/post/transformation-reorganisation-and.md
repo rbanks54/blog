@@ -6,21 +6,19 @@ tags : [software engineering philosophy, agile]
 ---
 
 It seems that almost everywhere I look, a big corporate is going through a 'transformation' or 'reorganisation'. Clearly someone within these organisation is making the decision that this is required because of problems occurring with existing software delivery practices.  That is, they want something improved.  
-  
+
 Throughout 2016, I lost more than 20kgs of weight. I did this very slowly through dieting and returning back to my previous exercising habits. I've maintained this weight throughout 2017 and now. How I did I do this? Well, I took out the obvious cheap calories out first: sugary drinks and junk food. When the weight started slowing I then took out desert. When the weight started slowing again, I reduced my carb intake. When it started slowing again I cut out carbs. When it started slowing again, I began to count calories. I now have kept the weight off, feel reat, and habitually live a healthy lifestyle. I am also able to indulge every now and then. NB: I'm not a health professional and if you are going through any weight problems please consult your medical doctor or other health professional.  
-  
 
 [![](https://1.bp.blogspot.com/-yOw_kD-UWmA/WqJqRDb8HQI/AAAAAAAAQ2A/aVUFh0h-GuEbAfmafY3V4bHLuqma-M7JgCLcBGAs/s320/transformation.png)](https://1.bp.blogspot.com/-yOw_kD-UWmA/WqJqRDb8HQI/AAAAAAAAQ2A/aVUFh0h-GuEbAfmafY3V4bHLuqma-M7JgCLcBGAs/s1600/transformation.png)
 
 One year apart. My transformation (or continuous improvement). 
 
-  
 Back to software delivery. There are a few problems associated with a transformation or reorganisation. The first being that it makes many people feel unsafe. Employees knowing that the company is looking to rapidly change will naturally fear that they will be moved on or not get the promotion they were working for. This will cause a culture where people continually want to show their worth, often at the expense of other people. This subsequently **creates an unhealthy culture of survival at the expense of another instead of working with the other**.  
-  
+
 My recommendation to people looking at going through a transformation or reorganisation is to be patient and focus on continuous improvement. Find the few obvious bottlenecks first and address them, after these are alleviated then address the next bottle necks. Naturally the phenomena of [diminishing returns](https://en.wikipedia.org/wiki/Diminishing_returns) will occur. Improvement and wins will be easy at first, eventually however, they will become more difficult and slow down (just like my weight loss, it became more difficult the more weight I lost until I reached my target weight). The advantage of this approach though is that the improvements are usually permanent and the organisation develops a habitual culture of continuous improvement (just like my lifestyle change).  
-  
+
 Compare this with a big bang transformation that often occurs after a consultant has convinced the board through an eloquent delivery of a perfectly crafted act of rhetoric. A transformation often forces an entire organisation to adopt an agile framework unheard of by most people inside the organisation. Sure, we may see some wins initially, however, more often than not they won't survive. Too many things have changed in too quick a time and healthy habits have not formed. An organisational transformation is like yoyo dieting that I have attempted in the past. Cutting my calories by half, losing a whole bunch of weight in a short period of time, but then putting it all back on very quickly.  
-  
+
 Practically speaking though, how do we find these bottlenecks mentioned previously? A good approach that David Anderson mentions in his book  _Kanban_ is to simply visualise the current flow of the organisation without actually changing anything. Visualising this flow through a board allows you to clearly see where the work itself is piling up, so that the bottle neck itself is made visible. Another approach that I like is to simply ask people what is annoying them the most, if a pattern is found, then address it. Sometimes people won't actually tell you what there annoyances are due to fear, however, constant reassurances of safety will help them eventually open up.  
-  
+
 In the end, favour continuous improvement over reorganisation or transformation. Continuous improvement changes mindsets (like a change in lifestyle). A transformation or reorganisation might appear to make big changes in the short-term, however, it does not address habitual and cultural changes that need to occur within an organisation to really change it in the long-term.

@@ -11,8 +11,7 @@ Incremental, iterative, sprints. Whatever word you may use, the whole point is, 
 *Rock climbing. Source: WikiMedia Commons*
 
 
-Here are a few analogies I've been working with to help people understand the importance of frequent delivery.  
-  
+Here are a few analogies I've been working with to help people understand the importance of frequent delivery.
 
 ## Cooking a new dish
 When first learning to cook a new dish. We get the ingredients, read the recipe a few times, cook the dish, then eat it. **We do not cook the dish then throw it away.** No, we eat it, invite others to taste it then get feedback. After getting feedback we go through the process of cooking the dish again. The second time around, the dish will taste better, the third even better. Until we've become so good at cooking this one particular dish that we can cook it perfectly and quickly.
