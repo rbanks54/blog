@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Readify on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/readify/</link>
+    <description>Recent content in Readify on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 08 Oct 2014 18:54:00 +1100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/readify/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Leaving CSB Engage :(</title>
+      <link>http://example.org/posts/leaving-csb-engage/</link>
+      <pubDate>Wed, 08 Oct 2014 18:54:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/leaving-csb-engage/</guid>
+      <description>What a journey it has been!
+Whether it be developing SIG using the Facebook and Instagram APIs or managing huge data sets (close to 1 billion). CSB Engage has been a wonderful place to work. It had flexibility and a great culture. The best thing would probably be the Monday lunches. This is where one person from the team would bring lunch from home and we would eat together. I&amp;rsquo;m proud that I&amp;rsquo;ve seen CSB Engage grow from Endless Rewards, to its merger with OnitMedia and I&amp;rsquo;ve been there every step of the way.</description>
+    </item>
+    
+  </channel>
+</rss>

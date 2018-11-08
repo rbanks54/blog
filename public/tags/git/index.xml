@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/git/</link>
+    <description>Recent content in Git on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 01 Feb 2018 15:54:00 +1100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My top 3 development tools</title>
+      <link>http://example.org/posts/my-top-3-development-tools/</link>
+      <pubDate>Thu, 01 Feb 2018 15:54:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/my-top-3-development-tools/</guid>
+      <description>Every developer has a set of development tools which they use on a regular basis. Below is a list of my top three tools, why I use them, and how they benefit me. In the list below I haven&amp;rsquo;t included code editors, IDEs, or extensions to IDEs. Please note: this may disappoint many of you who are expecting something &amp;ldquo;advanced&amp;rdquo; or &amp;ldquo;funky&amp;rdquo;.
+
+Some tools. Source: Wikimedia Commons
+posh-git Git has become the VCS of choice these days, and I have previously advocated that those who use git should primarily use it from the command line.</description>
+    </item>
+    
+    <item>
+      <title>Git breaking? Get off the UI</title>
+      <link>http://example.org/posts/git-breaking-get-off-ui/</link>
+      <pubDate>Mon, 08 Jan 2018 09:24:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/git-breaking-get-off-ui/</guid>
+      <description>Git is perhaps the best VCS I&amp;rsquo;ve used in my life. However, some of the things I always hear when people are trying to learn Git, or have used it for a while but never in larger teams are:
+&amp;ldquo;something stuffed up my Git&amp;rdquo;
+&amp;ldquo;my Git is broken&amp;rdquo;
+In my experience, Git is probably the most predictable, deterministic tool I&amp;rsquo;ve ever used (thankfully, considering it does version your code!).
+git logo.</description>
+    </item>
+    
+    <item>
+      <title>PowerShell from SourceTree as a custom action</title>
+      <link>http://example.org/posts/powershell-from-sourcetree-as-custom-comments/</link>
+      <pubDate>Mon, 04 May 2015 15:08:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/powershell-from-sourcetree-as-custom-comments/</guid>
+      <description> start powershell -Command &amp;ldquo;start powershell&amp;amp;q&amp;hellip; Roberto - Feb 6, 2016
+start powershell -Command &amp;ldquo;start powershell&amp;rdquo;
+This command works better: source tree would not hang waiting for you to close the shell </description>
+    </item>
+    
+    <item>
+      <title>PowerShell from SourceTree as a custom action</title>
+      <link>http://example.org/posts/powershell-from-sourcetree-as-custom/</link>
+      <pubDate>Mon, 04 May 2015 15:08:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/powershell-from-sourcetree-as-custom/</guid>
+      <description>Step 1:
+Create a ps.bat file with one line:
+start powershell
+Save this file in an appropriate location. I saved mine to:
+C:\CustomCommands
+
+Step 2:
+Add a custom action to SourceTree.
+You do this by going to
+Tools -&amp;gt; Options -&amp;gt; Custom Actions
+
+
+Click the &amp;lsquo;Add&amp;rsquo; button and you will get another Window.
+On the &amp;lsquo;Menu caption&amp;rsquo; type an identifier for PowerShell and on &amp;lsquo;Script to run&amp;rsquo; navigate to the script you made in step 1 then click &amp;lsquo;OK&amp;rsquo; and exit from the &amp;lsquo;Options&amp;rsquo; Window.</description>
+    </item>
+    
+  </channel>
+</rss>

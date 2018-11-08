@@ -2,3 +2,6 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "Raph's Blog"
 theme = "kiera"
+
+[permalinks]
+  post = "/:year/:month/:title/"

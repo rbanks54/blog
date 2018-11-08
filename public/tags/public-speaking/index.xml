@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Public Speaking on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/public-speaking/</link>
+    <description>Recent content in Public Speaking on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 28 Sep 2017 09:19:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/public-speaking/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My first time speaking at a conference</title>
+      <link>http://example.org/posts/my-first-time-speaking-at-conference/</link>
+      <pubDate>Thu, 28 Sep 2017 09:19:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/my-first-time-speaking-at-conference/</guid>
+      <description>Since time immemorial we humans have valued the art of public speaking. Today, I want to share with you my experiences in speaking at conferences for the first time. Recently, I spoke at both DDD Melbourne and DDD Perth. Both of which were positive experiences that I learnt a lot in.
+
+source: Wikipedia
+So you may have been speaking at MeetUps, internal company events and/or Toastmasters and feel it&amp;rsquo;s time to graduate to a full conference.</description>
+    </item>
+    
+  </channel>
+</rss>

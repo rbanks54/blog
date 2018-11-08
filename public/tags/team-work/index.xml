@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Team Work on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/team-work/</link>
+    <description>Recent content in Team Work on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Aug 2018 17:47:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/team-work/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reboot DevOps (Part: III)</title>
+      <link>http://example.org/posts/reboot-devops-part-iii/</link>
+      <pubDate>Tue, 14 Aug 2018 17:47:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops-part-iii/</guid>
+      <description>As alluded to in Part 1 and II it seems that DevOps has just become about CI/CD pipelines, provisioning infrastructure, and deploying applications. Today, we&amp;rsquo;ll speak about CI/CD pipelines but more specifically the purpose they seek to provide.
+Firstly, I think the term CI/CD is counter-intuitive. It&amp;rsquo;s not a descriptive term and I would prefer to use the far more boring term release pipeline because it is self descriptive. Our primary concern is how does candidate code get from a local developer&amp;rsquo;s machine all the way into production.</description>
+    </item>
+    
+    <item>
+      <title>It depends</title>
+      <link>http://example.org/posts/it-depends/</link>
+      <pubDate>Mon, 02 Jul 2018 12:33:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/it-depends/</guid>
+      <description>A few months ago I wrote a post I Don’t Know. It was a post that explained why being honest about things you don’t know is important, as it builds trust amongst team members. I also explained why saying you don’t know something and following it up with a desire to actually take action, in order to gain that knowledge, is important. Today, I will talk about the words “it depends”.</description>
+    </item>
+    
+    <item>
+      <title>Stop Demonising Process</title>
+      <link>http://example.org/posts/stop-demonising-process/</link>
+      <pubDate>Tue, 19 Jun 2018 08:42:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/stop-demonising-process/</guid>
+      <description>All too often people appeal to being &amp;ldquo;Agile&amp;rdquo; as a way to avoid following or having process. It could be because the term &amp;ldquo;Agile&amp;rdquo; implies flexibility or even because the Agile Manifesto itself says explicitly that &amp;ldquo;Individuals and interactions over processes and tools&amp;rdquo;. Here, the manifesto doesn&amp;rsquo;t say that being &amp;ldquo;Agile&amp;rdquo; doesn&amp;rsquo;t mean you don&amp;rsquo;t have process, it simply says you favour individuals over process. The demonisation of process could also be a knee jerk reaction of when teams had process imposed on them.</description>
+    </item>
+    
+    <item>
+      <title>3, 2, 1 - REVEAL POINTS. The true value of poker sizing</title>
+      <link>http://example.org/posts/3-2-1-reveal-points-true-value-of-poker/</link>
+      <pubDate>Thu, 08 Feb 2018 09:00:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/3-2-1-reveal-points-true-value-of-poker/</guid>
+      <description>Many of us are in teams with a good habit of sizing work items, and in many cases this is a good habit. However, do we truly understand the importance of this behaviour? Why do we do it? Is it even necessary, and where is the real value of all this?
+
+A Royal Flush, the highest possible hand in poker: Source Wikimedia Commons
+Points poker sizing is very common. The team calculate velocity and use this velocity to forecast their work for their next work iteration.</description>
+    </item>
+    
+    <item>
+      <title>Git breaking? Get off the UI</title>
+      <link>http://example.org/posts/git-breaking-get-off-ui/</link>
+      <pubDate>Mon, 08 Jan 2018 09:24:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/git-breaking-get-off-ui/</guid>
+      <description>Git is perhaps the best VCS I&amp;rsquo;ve used in my life. However, some of the things I always hear when people are trying to learn Git, or have used it for a while but never in larger teams are:
+&amp;ldquo;something stuffed up my Git&amp;rdquo;
+&amp;ldquo;my Git is broken&amp;rdquo;
+In my experience, Git is probably the most predictable, deterministic tool I&amp;rsquo;ve ever used (thankfully, considering it does version your code!).
+git logo.</description>
+    </item>
+    
+    <item>
+      <title>I Don&#39;t Know</title>
+      <link>http://example.org/posts/i-dont-know/</link>
+      <pubDate>Tue, 02 Jan 2018 17:05:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/i-dont-know/</guid>
+      <description>Many people who come from command and control working environments have a very limited circle of safety. This maybe because their suggestions have been discarded rudely, being treated poorly, or always fearing for their job. They do not suggest improvements and are often too scared to ask for help.
+
+source: Wiki Commons
+[](https://www.blogger.com/null)When working in environments like this that are trying to change for the better. One of the things we can do is say &amp;ldquo;I don&amp;rsquo;t know&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>WHY the same place and time for your daily stand-up?</title>
+      <link>http://example.org/posts/why-same-place-and-time-for-your-daily/</link>
+      <pubDate>Mon, 18 Jul 2016 20:20:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/why-same-place-and-time-for-your-daily/</guid>
+      <description>&amp;ldquo;we&amp;rsquo;re all here, let&amp;rsquo;s just have stand-up now&amp;rdquo;
+&amp;ldquo;so-and-so isn&amp;rsquo;t coming today, so let&amp;rsquo;s have stand-up now&amp;rdquo;
+&amp;ldquo;hey, I&amp;rsquo;ll just come over there and we&amp;rsquo;ll do stand-up there&amp;rdquo;
+It seems so easy and innocent to simply change the time and place of stand-ups, especially when key people such as the PO or Scrum master may not be attending the meeting for the day. The reasons I recommend for not changing are:</description>
+    </item>
+    
+  </channel>
+</rss>

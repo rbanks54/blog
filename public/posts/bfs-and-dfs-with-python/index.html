@@ -1,0 +1,237 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>BFS and DFS with Python</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2014-02-25T14:37:00&#43;11:00">Feb 25, 2014</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/data-structure-revision/">#data structure revision</a>
+                
+                    , 
+                    <a href="/tags/computer-science/">#computer science</a>
+                
+                    , 
+                    <a href="/tags/python/">#python</a>
+                
+            </em>
+        </li>
+        
+
+        <li>4 min read</li>
+    </ul>
+</aside>
+    
+
+    <p><a href="https://github.com/RaphHaddad/DSRevision">GitHub</a></p>
+
+<p>So I&rsquo;ve found myself in a situation where I have had to revise simple Data Structures from my Software Engineering Degree. I have not done this for several years, so naturally my first step in this process was looking at the workings of various structures on Google (then subsequently Wikipedia). After refreshing my memory, I decided that the best thing to do was code up these algorithm.</p>
+
+<p>In this blog post, I will show you the BFS (breadth first search) and the DFS (depth first search) in Python.</p>
+
+<p>Unfortunately many of the already Python implementations of these algorithms on the web are either over complicated or have readability issues or don&rsquo;t emphasise the difference between the two algorithms.</p>
+
+<p>I will attempt to explain both, and give a readable and understandable explanation of both. Targeted towards first year Computer Science or Software Engineering students.<br />
+Just a small note before I move on. I remember doing this in first year University where we had used Java. It was a nightmare. I programmed this in Python today and it made me think how much more we could&rsquo;ve learnt if we used Python at USyd&hellip; anyway, here goes!</p>
+
+<p>If you know what stacks and queues are skip the below two paragraphs.</p>
+
+<p>Queue
+A Queue is a computation abstraction of a real-word queue. So, imagine a queue at the movies. The first person to arrive will get served first, the second will get served second etc. Basically a queue is first-come-first-serve. In Computer Science terms, this would be <strong>first-in-first-out</strong>.</p>
+
+<p>Stack
+A Stack is (guess what) just like a real-world Stack. So, just imagine a bunch of plates being washed. All of them are stacked up after the washing of the plates. Now someone hungry comes (probably me) and wishes to take a plate. He/she would take the first plate on the stack. So basically the last plate added on the stack of plates was the first one to be used. So a stack is, in computer science terms is, <strong>last-in-first-out</strong>.</p>
+
+<p>A Graph<br />
+A graph is a structure where one object is able to be linked to one or more objects. An example of a graph is something like Facebook or a food chain. See below for an image from wikipedia:</p>
+
+<p><a href="http://upload.wikimedia.org/wikipedia/commons/5/5b/6n-graf.svg"><img src="http://upload.wikimedia.org/wikipedia/commons/5/5b/6n-graf.svg" alt="" /></a></p>
+
+<p>We call the &lsquo;things&rsquo; nodes (in this case the numbers) and we call the links between two nodes the edges.</p>
+
+<p>BFS (Breadth First Search)</p>
+
+<p>Now, let&rsquo;s talk about the breadth first search. The BFS starts with any arbitrary node and makes it the current node, the BFS then checks if the current node is the node we are looking for. If it is the node we are looking for then search is completed. If it (the current node) is not then we take all the nodes that are linked to the current node and put them on a <em>queue</em>. We then take a node from the <em>queue</em> and it becomes the current node. The process is repeated until we find the node we need.</p>
+
+<p><a href="http://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif"><img src="http://upload.wikimedia.org/wikipedia/commons/4/46/Animated_BFS.gif" alt="" /></a></p>
+
+<p>DFS (Depth First Search)</p>
+
+<p><a href="http://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif"><img src="http://upload.wikimedia.org/wikipedia/commons/7/7f/Depth-First-Search.gif" alt="" /></a></p>
+
+<p>See what I did there? I simply copied the paragraph BFS (Breadth First Search) and made it the paragraph DFS (Depth First Search). By changing BFS with DFS and changing breadth with depth and changing <em>queue</em> with <em>stack</em>!</p>
+
+<p>Implementation</p>
+
+<p>Firstly, we need to learn how to represent a graph computationally. We <em>can</em> represent graphs as a list of lists. Below is an example of how the above graph is represented</p>
+
+<p>[</p>
+
+<pre><code>1: \[2,5,9\],  
+2: \[3\],  
+3: \[4\],  
+5: \[6,8\],  
+6: \[7\],  
+9: \[10\]  
+</code></pre>
+
+<p>]</p>
+
+<p>this basically tells us.</p>
+
+<ul>
+<li>1 is connected to 2,5 and 9.</li>
+<li>2 is connected to 3</li>
+<li>3 is connected to 4</li>
+<li>5 is connected to 6 and 8</li>
+<li>6 is connected to 7</li>
+<li>9 is connected to 10</li>
+</ul>
+
+<p>In our example though. We will be using a dictionary of lists, because our keys are text. A dictionary basically converts text to a number anyway.</p>
+
+<p>Below is the graph and the computational representation:</p>
+
+<p>graph = {<br />
+            &ldquo;human&rdquo; : [&ldquo;chicken&rdquo;,&ldquo;pig&rdquo;,&ldquo;shark&rdquo;],<br />
+            &ldquo;shark&rdquo; : [&ldquo;nemo&rdquo;,&ldquo;batfish&rdquo;],<br />
+            &ldquo;batfish&rdquo; : [&ldquo;tuna&rdquo;],</p>
+
+<pre><code>        &quot;pig&quot; : \[&quot;apple&quot;,&quot;mush&quot;\],  
+        &quot;chicken&quot; : \[&quot;grass&quot;,&quot;grains&quot;\]  
+    }  
+</code></pre>
+
+<p><a href="http://2.bp.blogspot.com/-eCEsdf6HgBw/UwwIIt5c53I/AAAAAAAAADQ/iBebCdMBJfo/s1600/graph.png"><img src="http://2.bp.blogspot.com/-eCEsdf6HgBw/UwwIIt5c53I/AAAAAAAAADQ/iBebCdMBJfo/s1600/graph.png" alt="" /></a></p>
+
+<p>So how do we code DFS and BFS?</p>
+
+<p>See below</p>
+
+<p>def bfs(graph,root,whatToFind):<br />
+    queue = Queue.Queue()<br />
+    queue.put(root)<br />
+    while queue:<br />
+        curr = queue.get()<br />
+        print curr<br />
+        if whatToFind == curr:<br />
+            print &lsquo;found!&rsquo;<br />
+            return<br />
+        if curr in graph:<br />
+            [queue.put(adjacent) for adjacent in graph[curr]]</p>
+
+<p>def dfs(graph,root,whatToFind):<br />
+    stack = []<br />
+    stack.append(root)<br />
+    while stack:<br />
+        curr = stack.pop()<br />
+        print curr<br />
+        if whatToFind == curr:<br />
+            print &lsquo;found!&rsquo;<br />
+            return<br />
+        if curr in graph:<br />
+            [stack.append(adjacent) for adjacent in graph[curr]]</p>
+
+<p>Like the above explanation given for the BFS and DFS. The algorithms are nearly the same as well. Except one algorithm uses the Queues (BFS) and the other uses the Stacks (BFS).</p>
+
+<p><strong>Note:</strong> We have used Python list comprehension to add to the Queue and Stack to stick with the <em>text book definition of Stacks and Queues</em></p>
+
+<p>The python code also Prints the current node being explored on the terminal so that you can see the path taken to explore.</p>
+
+<p>This code is available on <a href="https://github.com/RaphAustralia/DSRevision">GitHub</a> if you want to test it!</p>
+
+<p>Thanks for reading!</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/instagram-api-filtering-comments/"><i class="fa fa-chevron-circle-left"></i> Instagram API filtering (or querying)</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/front-end-development-responsiblities/">Front-end development responsibilities as a (back-end) software engineer <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

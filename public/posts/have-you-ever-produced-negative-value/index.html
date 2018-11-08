@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Have You Ever Produced Negative Value in a System!?</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2017-11-24T08:50:00&#43;11:00">Nov 24, 2017</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/software-engineering-philosophy/">#software engineering philosophy</a>
+                
+                    , 
+                    <a href="/tags/software-engineering/">#software engineering</a>
+                
+            </em>
+        </li>
+        
+
+        <li>3 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>As developers we encourage our product owners to order the priority of their backlog in order of value. However, every time a new feature is implemented by a development team, there is a certain degree of risk associated with the introduction of that new code. Namely, risk of breaking another part of the product and maintenance cost. When a development team pulls in a new feature to implement there is a certain acceptance of this risk. In many cases, the risks that arise due to additional code complexity doesn&rsquo;t justify the value added by the new feature itself, so the development team can start implementing it.</p>
+
+<p>Are there scenarios where the value added to a software product can be negative though?</p>
+
+<p>The short answer is: <em>yes</em>. As touched on previously, any code that is introduced into a system increases complexity (even if it is a little bit) and risks breaking something else. If a feature is wanted by a product owner, that we can be certain will never be used by our users, then it is in effect introducing negative value into the code base. The more complexity the unneeded feature introduces, the more negative value has been introduced into the system. What makes this <strong>even worse than technical debt</strong> is that it is something that can&rsquo;t be paid off, because it is something that was explicitly requested by the product owner or business and something they don&rsquo;t want removed.</p>
+
+<p>I had found myself in the above scenario, being forced to provide negative value to a system. I was forced to accept that I needed to introduce a certain feature to a system that our data showed will never be used. </p>
+
+<p>So how do we address this issue? Firstly it&rsquo;s important to educate business on system complexity. Make it clear as soon as you can that anything introduced into a code base has a risk of breaking another feature. Be clear with them, that the only system with no risk of not breaking anything is one with no features to begin with - this is an extreme but it stands true. It is similar to the proposition that the only secure system on the internet is one that&rsquo;s not on the internet - an extreme, but it stand true. Sometimes, you will be forced to introduce this kind of negative value into a code-base and if you do I suggest you do the following: Highlight the risks honestly and explaining complexity as I&rsquo;ve attempted above.</p>
+
+<p>To hedge these risks from a technical perspective you have to be sure you have good testing practices. Especially TDD in both feature development <strong>and bug fixes.</strong></p>
+
+<p>If all that fails and you still get forced to do something like this, just remember - I understand how you feel, have been there and felt the pain!</p>
+
+<p>Once again thank you for reading my blog. Any comments, suggestions, or feedback are more than welcome.</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/from-zero-to-production-in-eighty-days/"><i class="fa fa-chevron-circle-left"></i> from zero to production in eighty days</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/have-you-ever-produced-negative-value-comments/">Have You Ever Produced Negative Value in a System!? <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

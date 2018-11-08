@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scrum on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/scrum/</link>
+    <description>Recent content in Scrum on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 20 Nov 2015 10:27:00 +1100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/scrum/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The &#34;planning &lt;--&gt; implementation&#34; balance</title>
+      <link>http://example.org/posts/the-planning-implementation-balance/</link>
+      <pubDate>Fri, 20 Nov 2015 10:27:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/the-planning-implementation-balance/</guid>
+      <description>One of the great things about Agile is the ability to manage the expectations of stakeholders quite early in the development cycle. Likewise, from a business perspective: one of the great things about Agile is the ability to change requirements late in the development cycle.
+When putting together an initial product backlog with estimates and detail. A certain amount of planning is done (whether this software product be a green field project or a slice in an existing project).</description>
+    </item>
+    
+    <item>
+      <title>Disaster (security or otherwise) in an agile (scrum) environment</title>
+      <link>http://example.org/posts/disaster-security-or-otherwise-in-agile/</link>
+      <pubDate>Mon, 31 Aug 2015 14:49:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/disaster-security-or-otherwise-in-agile/</guid>
+      <description>When a disaster occurs in a system. Be that security, data or accidental the first thing that occurs in the psyche of the whole scrum team is:
+Something, unusual has happened. Something different has happened. What do we do? What are the next steps.
+The very definition of disaster in the Macquarie Dictionary alludes to this.
+disaster
+ Pronunciation of disaster /dəˈzastə/ (say duh&amp;rsquo;zahstuh)
+noun 1. any unfortunate event, especially a sudden or great misfortune.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,107 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Azure SDK 2.4 to 2.5 upgrade. Error: &#34;&#39;Microsoft.WindowsAzure.ServiceRuntime.RoleEnvironment&#39; exists in both &#39;Microsoft.WindowsAzure.ServiceRuntime.dll&#39; and &#39;Microsoft.WindowsAzure.ServiceRuntime.dll&#34;</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2015-03-11T09:51:00&#43;11:00">Mar 11, 2015</time>
+        </li>
+        
+        
+
+        
+
+        <li>1 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>If you&rsquo;re getting this error while calling the type &lsquo;RoleEnvironments&rsquo; then there is probably something wrong with the Visual Studio migration of Azure 2.4 to 2.5.</p>
+
+<p>To fix this issue simply remove then add references to the DLL Microsoft.WindowsAzure.ServiceRuntime.dll to the project that&rsquo;s calling &lsquo;RoleEnvironments&rsquo;.</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/json-serialisationdeserialisation-with-comments/"><i class="fa fa-chevron-circle-left"></i> JSON serialisation/deserialisation with snake_case naming conventions</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/azure-24-to-25-upgrade-error-comments/">Azure SDK 2.4 to 2.5 upgrade. Error: &#34;&#39;Microsoft.WindowsAzure.ServiceRuntime.RoleEnvironment&#39; exists in both &#39;Microsoft.WindowsAzure.ServiceRuntime.dll&#39; and &#39;Microsoft.WindowsAzure.ServiceRuntime.dll&#34; <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

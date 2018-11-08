@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Automation on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/automation/</link>
+    <description>Recent content in Automation on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Apr 2018 07:33:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/automation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tips to Automate Yourself Out of a Job</title>
+      <link>http://example.org/posts/tips-to-automate-yourself-out-of-job/</link>
+      <pubDate>Thu, 05 Apr 2018 07:33:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/tips-to-automate-yourself-out-of-job/</guid>
+      <description>Providing tools, processes, and platforms that automate everything, including yourself out of a job should be the goal of everyone in IT. It&amp;rsquo;s something people rant about on Twitter, speak about on YouTube, and attempt to inspire on LinkedIn. Everyone seems to be telling us we _should_ automate our jobs, not many are telling us how. Today I have a few practical things you can do to actualise this goal.</description>
+    </item>
+    
+  </channel>
+</rss>

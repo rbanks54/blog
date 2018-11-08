@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reflection on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/reflection/</link>
+    <description>Recent content in Reflection on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 03 Sep 2018 13:53:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/reflection/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Do you know what I mean?</title>
+      <link>http://example.org/posts/do-you-know-what-i-mean/</link>
+      <pubDate>Mon, 03 Sep 2018 13:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/do-you-know-what-i-mean/</guid>
+      <description>I&amp;rsquo;ve written previously about some language that I&amp;rsquo;m actively trying to change in my day-to-day dealings with people, I write these blog posts because they hold me public accountable to my peers, friends, and family. My previous posts were:
+It Depends
+I Don&amp;rsquo;t Know
+
+Shrugging. Source: Wikimedia Commons
+Today, I want to highlight some of the other phrases I&amp;rsquo;ll be trying to actively avoid in my dad-to-day speech. These are:</description>
+    </item>
+    
+  </channel>
+</rss>

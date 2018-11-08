@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>User Experience on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/user-experience/</link>
+    <description>Recent content in User Experience on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jul 2014 22:05:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/user-experience/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The missing piece in social media (digital) strategy - SIG</title>
+      <link>http://example.org/posts/the-missing-piece-in-social-media/</link>
+      <pubDate>Tue, 01 Jul 2014 22:05:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/the-missing-piece-in-social-media/</guid>
+      <description>The new breed of digital marketers are here! They are called &amp;ldquo;Social Media Strategists&amp;rdquo;. Social media strategy involves businesses generating social media actions (likes, tweets, checkins etc) on their own business page (Facebook Fan page, Twitter account or Instagram account). The reason? to ensure that a business page receives adequate attention on the news feed of social media users.
+These strategies include devising plans to post rich content that will enable loyal customers to perform social media actions and hence provide a mechanism for customers to tell their friends about a certain company.</description>
+    </item>
+    
+    <item>
+      <title>Front-end development responsibilities as a (back-end) software engineer</title>
+      <link>http://example.org/posts/front-end-development-responsiblities-comments/</link>
+      <pubDate>Wed, 26 Mar 2014 22:29:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/front-end-development-responsiblities-comments/</guid>
+      <description> As a front end developer I agree with this. Good b&amp;hellip; Alejandro Magnorsky - Mar 4, 2014
+As a front end developer I agree with this. Good back-end development and use of new technologies make the work for the front end developer easier, faster and better. </description>
+    </item>
+    
+    <item>
+      <title>Front-end development responsibilities as a (back-end) software engineer</title>
+      <link>http://example.org/posts/front-end-development-responsiblities/</link>
+      <pubDate>Wed, 26 Mar 2014 22:29:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/front-end-development-responsiblities/</guid>
+      <description>What seems to be predominant in the industry today is a fixation on a software engineer simply creating (yes creating, maybe we&amp;rsquo;ll discuss the importance of this verb for another blog post) products that solve a specific business problem (or requirement). While this is good from the outset. It raises several questions of the responsibility of a software engineer to begin with.
+Before I get into the real content of this blog post, I would like to share with you my current working environment, so you can analyse any predisposed prejudices I may or may not have.</description>
+    </item>
+    
+  </channel>
+</rss>

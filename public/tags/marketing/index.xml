@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Marketing on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/marketing/</link>
+    <description>Recent content in Marketing on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 01 Jul 2014 22:05:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/marketing/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The missing piece in social media (digital) strategy - SIG</title>
+      <link>http://example.org/posts/the-missing-piece-in-social-media/</link>
+      <pubDate>Tue, 01 Jul 2014 22:05:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/the-missing-piece-in-social-media/</guid>
+      <description>The new breed of digital marketers are here! They are called &amp;ldquo;Social Media Strategists&amp;rdquo;. Social media strategy involves businesses generating social media actions (likes, tweets, checkins etc) on their own business page (Facebook Fan page, Twitter account or Instagram account). The reason? to ensure that a business page receives adequate attention on the news feed of social media users.
+These strategies include devising plans to post rich content that will enable loyal customers to perform social media actions and hence provide a mechanism for customers to tell their friends about a certain company.</description>
+    </item>
+    
+  </channel>
+</rss>

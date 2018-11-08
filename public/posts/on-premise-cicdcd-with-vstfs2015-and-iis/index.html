@@ -1,0 +1,208 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>On premise CI/CD/CD with VSTFS2015 and IIS</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2016-08-01T17:30:00&#43;10:00">Aug 1, 2016</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/vstfs2015/">#VSTFS2015</a>
+                
+                    , 
+                    <a href="/tags/devops/">#devops</a>
+                
+                    , 
+                    <a href="/tags/iis/">#IIS</a>
+                
+            </em>
+        </li>
+        
+
+        <li>3 min read</li>
+    </ul>
+</aside>
+    
+
+    
+
+<p>Many clients I visit are still not on the cloud and are still not using VSTS (Visual Studio Team Services) online and Azure.</p>
+
+<p>Meaning, they still have on premise infrastructure for their applications. Now, I don&rsquo;t want this blog post to turn into a defence of cloud (more specifically PaaS). Rather, I want to quickly show you how you can setup a CI/CD/CD  (Continuous Integration/Delivery/Deployment) delivery pipeline with an on-premise instance of VSTFS 2015 deploying to machines with IIS .</p>
+
+<p>Basically, if you&rsquo;re still on premise! It&rsquo;s not an excuse to disregard DevOps practices!!</p>
+
+<h3 id="build">Build</h3>
+
+<p>The first step is to setup your builds. To do this navigate to the build tab in your Visual Studio Team Foundation Server 2015 collection and create a new build definition:</p>
+
+<p><a href="https://1.bp.blogspot.com/-nvPiSNeZ9ZM/V56NpxUuUSI/AAAAAAAAKkg/vx9_hYa2wBYqYfCb3DxneGYjTu7IsDapQCLcB/s1600/2016-08-01%2B09_44_41-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-nvPiSNeZ9ZM/V56NpxUuUSI/AAAAAAAAKkg/vx9_hYa2wBYqYfCb3DxneGYjTu7IsDapQCLcB/s640/2016-08-01%2B09_44_41-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p>Follow the wizard and be sure to <strong>tick the box &lsquo;Continuous Integration&rsquo;</strong>. By ticking this box you ensure that on every commit (or checkin if you&rsquo;re using TFS-VC) your code will compile.</p>
+
+<p><a href="https://4.bp.blogspot.com/-BHW4n9BP5qg/V56OWeEVdWI/AAAAAAAAKks/-Fum6z9Agn0gIevJw_x151yEhmKgpfW9wCLcB/s1600/2016-08-01%2B09_48_31-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://4.bp.blogspot.com/-BHW4n9BP5qg/V56OWeEVdWI/AAAAAAAAKks/-Fum6z9Agn0gIevJw_x151yEhmKgpfW9wCLcB/s400/2016-08-01%2B09_48_31-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p><a href="https://4.bp.blogspot.com/-MpxYw7rnuiI/V56OKKHfH0I/AAAAAAAAKkk/VITNnKiicfM-UETcPDik11bJKKn1kIkRwCLcB/s1600/2016-08-01%2B09_47_26-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.png"><img src="https://4.bp.blogspot.com/-MpxYw7rnuiI/V56OKKHfH0I/AAAAAAAAKkk/VITNnKiicfM-UETcPDik11bJKKn1kIkRwCLcB/s400/2016-08-01%2B09_47_26-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.png" alt="" /></a></p>
+
+<p>In the &lsquo;NuGet restore&rsquo; and &lsquo;Build Solution&rsquo; steps. Be sure to explicitly specify the solution file. In the &lsquo;Build Solution&rsquo; step. Enter the following msbuild.exe argument: <strong>&rsquo;/p:DeployOnBuild=true /p:WebPublishMethod=Package  /p:PackageLocation=$(build.stagingDirectory)&lsquo;. </strong></p>
+
+<p><a href="https://3.bp.blogspot.com/-VXagVAPh65I/V574fXZ1csI/AAAAAAAAKng/ow7eBwMtEQ4-WXgQwWNf3X4qqImAjk3IQCLcB/s1600/2016-08-01%2B17_21_12-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://3.bp.blogspot.com/-VXagVAPh65I/V574fXZ1csI/AAAAAAAAKng/ow7eBwMtEQ4-WXgQwWNf3X4qqImAjk3IQCLcB/s640/2016-08-01%2B17_21_12-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p>Save the build definition and trigger a build</p>
+
+<p><a href="https://2.bp.blogspot.com/-JYrjxetkqzI/V56errt2_uI/AAAAAAAAKlI/Zd0DdaEZaY8nat87FykxAAnGrCQzbK1FwCLcB/s1600/2016-08-01%2B10_58_13-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://2.bp.blogspot.com/-JYrjxetkqzI/V56errt2_uI/AAAAAAAAKlI/Zd0DdaEZaY8nat87FykxAAnGrCQzbK1FwCLcB/s640/2016-08-01%2B10_58_13-Microsoft%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<h3 id="install-relevant-vsix-extentions">Install Relevant VSIX extentions</h3>
+
+<p>On your VSTFS2015 instance you will need to install some extensions. These are the IIS Extensions and can be found here:</p>
+
+<p><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.iiswebapp">https://marketplace.visualstudio.com/items?itemName=ms-vscs-rm.iiswebapp</a></p>
+
+<h3 id="release">Release</h3>
+
+<p>Go to the release tab and create a new &lsquo;Release Definition&rsquo;. Follow the wizard and be sure to tick &lsquo;Continuous Deployment&rsquo;</p>
+
+<p><a href="https://1.bp.blogspot.com/-mmpS-DjJ-AU/V56m-8VkQ6I/AAAAAAAAKlc/qeiWWYtqFq0oVTixja-a8PeoIJp7-8aKwCLcB/s1600/2016-08-01%2B11_32_10-Explorer%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-mmpS-DjJ-AU/V56m-8VkQ6I/AAAAAAAAKlc/qeiWWYtqFq0oVTixja-a8PeoIJp7-8aKwCLcB/s320/2016-08-01%2B11_32_10-Explorer%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p><a href="https://1.bp.blogspot.com/-ULbPaAto89A/V56m-9DhVXI/AAAAAAAAKlY/O4Wk6Nd9YLEgd9Mf8szVzofD2p8KuzUkQCLcB/s1600/2016-08-01%2B11_32_51-Explorer%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-ULbPaAto89A/V56m-9DhVXI/AAAAAAAAKlY/O4Wk6Nd9YLEgd9Mf8szVzofD2p8KuzUkQCLcB/s320/2016-08-01%2B11_32_51-Explorer%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p>If your artifacts have not linked. Be sure to go to the artifact tab and link your artifact from the build definition we just created.</p>
+
+<p><a href="https://2.bp.blogspot.com/-fi0I0twlBlA/V56ngzqhkmI/AAAAAAAAKlg/VWv_P1uYMxwnRhueQpTwuNkokq9R3BnSwCLcB/s1600/2016-08-01%2B11_35_55-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://2.bp.blogspot.com/-fi0I0twlBlA/V56ngzqhkmI/AAAAAAAAKlg/VWv_P1uYMxwnRhueQpTwuNkokq9R3BnSwCLcB/s640/2016-08-01%2B11_35_55-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p>Go to the environment tabs and add 3 tasks</p>
+
+<p>1. Copy Windows Machine File Copy</p>
+
+<p>2. WinRM - IIS Web App Management</p>
+
+<p>3. WinRM - IIS Web App Deployment</p>
+
+<h4 id="https-4-bp-blogspot-com-r6har1w5nle-v56pf3q4q5i-aaaaaaaaklw-rqpae0-wmauojeowukuanhk8p0sbfgg4qclcb-s640-2016-08-01-2b11-41-36-new-2bempty-2bdefinition-2b01-aug-2b-2bvisual-2bstudio-2bteam-2bservices-jpg-https-4-bp-blogspot-com-r6har1w5nle-v56pf3q4q5i-aaaaaaaaklw-rqpae0-wmauojeowukuanhk8p0sbfgg4qclcb-s1600-2016-08-01-2b11-41-36-new-2bempty-2bdefinition-2b01-aug-2b-2bvisual-2bstudio-2bteam-2bservices-jpg"><a href="https://4.bp.blogspot.com/-r6HaR1w5NlE/V56pF3q4Q5I/AAAAAAAAKlw/rqpae0_wmAUojeowukuanHK8P0sBFgG4QCLcB/s1600/2016-08-01%2B11_41_36-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://4.bp.blogspot.com/-r6HaR1w5NlE/V56pF3q4Q5I/AAAAAAAAKlw/rqpae0_wmAUojeowukuanHK8P0sBFgG4QCLcB/s640/2016-08-01%2B11_41_36-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></h4>
+
+<p>Copy files to remote machine(s)</p>
+
+<p>The first step is selecting the source of your drops. The target machine name, target machine credentials and the location where the drops should go on the target machine. Notice, I&rsquo;ve made these variables because they will be used in the other two build steps.</p>
+
+<p><a href="https://2.bp.blogspot.com/-eGUI06gegZs/V57a1RVbk_I/AAAAAAAAKmA/NJH0O4BnHhQncmG_xD52CsXIatrS3lAzwCLcB/s1600/2016-08-01%2B15_12_11-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://2.bp.blogspot.com/-eGUI06gegZs/V57a1RVbk_I/AAAAAAAAKmA/NJH0O4BnHhQncmG_xD52CsXIatrS3lAzwCLcB/s400/2016-08-01%2B15_12_11-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p><a href="https://4.bp.blogspot.com/-MwiXkcoGZ90/V57cyc76IrI/AAAAAAAAKmY/1sUOEaj19GUtnDuNn7qu_QiPNijiuM_hgCLcB/s1600/2016-08-01%2B15_23_18-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://4.bp.blogspot.com/-MwiXkcoGZ90/V57cyc76IrI/AAAAAAAAKmY/1sUOEaj19GUtnDuNn7qu_QiPNijiuM_hgCLcB/s640/2016-08-01%2B15_23_18-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p>You can set these variables on an environment or on the release definition itself. I set them on the environment. </p>
+
+<p><a href="https://3.bp.blogspot.com/-M-zPiFt4f3k/V57bXByfALI/AAAAAAAAKmI/a2D2WhS-N38_gpzL5gzBCV3lwy0MyQ1eACLcB/s1600/2016-08-01%2B15_17_14-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://3.bp.blogspot.com/-M-zPiFt4f3k/V57bXByfALI/AAAAAAAAKmI/a2D2WhS-N38_gpzL5gzBCV3lwy0MyQ1eACLcB/s400/2016-08-01%2B15_17_14-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p><a href="https://1.bp.blogspot.com/-eA-fMyzJWKs/V57iOOoiezI/AAAAAAAAKnQ/S37MQdhH1ikjyq4hiO7JY2dkHS_WwEVcACLcB/s1600/2016-08-01%2B15_46_06-ReleaseDef%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-eA-fMyzJWKs/V57iOOoiezI/AAAAAAAAKnQ/S37MQdhH1ikjyq4hiO7JY2dkHS_WwEVcACLcB/s640/2016-08-01%2B15_46_06-ReleaseDef%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<h4 id="manage-iis-app">Manage IIS App</h4>
+
+<p>Because we&rsquo;ve stored the connection and website settings from the previous step as variables. What we can do is simply enter them into the second step. Be sure to tick both &lsquo;Create or Update Website&rsquo; and &lsquo;Create or Update Application Pool&rsquo;</p>
+
+<p><a href="https://1.bp.blogspot.com/-tGGqcUOX30o/V57eu1ustoI/AAAAAAAAKms/a7_-i-VIol0nLLhPYtG7CwenhBtuqtSsQCLcB/s1600/2016-08-01%2B15_29_27-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-tGGqcUOX30o/V57eu1ustoI/AAAAAAAAKms/a7_-i-VIol0nLLhPYtG7CwenhBtuqtSsQCLcB/s640/2016-08-01%2B15_29_27-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<h4 id="deploy-iis-app">Deploy IIS App</h4>
+
+<p>Likewise in the last step. All the variables have already been set as part of the environment. The &lsquo;Web Deploy Package&rsquo; is the location of the zip file generated from our build. This is the file in the folder that was set in the first step of the release definition.</p>
+
+<p><a href="https://1.bp.blogspot.com/-_r05yxIbTOI/V57fVvAHYWI/AAAAAAAAKm0/MWMrXzgzkAooccfyAXjbv-LDVJFYbLSdgCLcB/s1600/2016-08-01%2B15_33_52-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-_r05yxIbTOI/V57fVvAHYWI/AAAAAAAAKm0/MWMrXzgzkAooccfyAXjbv-LDVJFYbLSdgCLcB/s640/2016-08-01%2B15_33_52-New%2BEmpty%2BDefinition%2B01-Aug%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<h3 id="setting-release-conditions-for-continuous-deployment">Setting release conditions for Continuous Deployment</h3>
+
+<p>The final step is setting the release conditions for continuous deployment.</p>
+
+<p><a href="https://1.bp.blogspot.com/-1id-2UrQwMg/V57gZgtXzKI/AAAAAAAAKnE/WUqxqwBOX0U1BRwAAvdXp9qWOYdqX7_mQCLcB/s1600/2016-08-01%2B15_37_37-ReleaseDef%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://1.bp.blogspot.com/-1id-2UrQwMg/V57gZgtXzKI/AAAAAAAAKnE/WUqxqwBOX0U1BRwAAvdXp9qWOYdqX7_mQCLcB/s640/2016-08-01%2B15_37_37-ReleaseDef%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+<p><a href="https://4.bp.blogspot.com/-dDA_GsBLZTo/V57gZoaG6DI/AAAAAAAAKnA/Ne9NZepAY7AKPXjf0gbjJH9uRuJTMDxzgCLcB/s1600/2016-08-01%2B15_38_27-ReleaseDef%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg"><img src="https://4.bp.blogspot.com/-dDA_GsBLZTo/V57gZoaG6DI/AAAAAAAAKnA/Ne9NZepAY7AKPXjf0gbjJH9uRuJTMDxzgCLcB/s640/2016-08-01%2B15_38_27-ReleaseDef%2B-%2BVisual%2BStudio%2BTeam%2BServices.jpg" alt="" /></a></p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/why-same-place-and-time-for-your-daily/"><i class="fa fa-chevron-circle-left"></i> WHY the same place and time for your daily stand-up?</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/more-than-just-buildrelease-pipeline/">More than just a build/release pipeline <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

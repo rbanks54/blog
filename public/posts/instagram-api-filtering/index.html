@@ -1,0 +1,1035 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Instagram API filtering (or querying)</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2014-02-21T16:53:00&#43;11:00">Feb 21, 2014</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/regex/">#regex</a>
+                
+                    , 
+                    <a href="/tags/json/">#json</a>
+                
+                    , 
+                    <a href="/tags/facebook-api/">#facebook api</a>
+                
+                    , 
+                    <a href="/tags/python/">#python</a>
+                
+                    , 
+                    <a href="/tags/instagraph-api/">#instagraph api</a>
+                
+            </em>
+        </li>
+        
+
+        <li>13 min read</li>
+    </ul>
+</aside>
+    
+
+    
+
+<p><a href="https://github.com/RaphHaddad/IgAPIFiltering">GitHub</a></p>
+
+<p>Instagram&rsquo;s APIs are well written, well documented, RESTfull and simply a breeze to use.</p>
+
+<p>I myself prefer them to the Facebook APIs, however the Facebook Graph API does have an advantage over that of the Instagram API - namely filtering. The question I will answer in this blog post is whether there is an efficient way to filter the Instagram API.</p>
+
+<h3 id="facebook-situation">Facebook Situation</h3>
+
+<p>For example, if I wanted to display information about a user on Facebook, I would query:</p>
+
+<p>/4</p>
+
+<p>The result would yield the result</p>
+
+<p>{<br />
+  &ldquo;id&rdquo;: &ldquo;4&rdquo;,<br />
+  &ldquo;name&rdquo;: &ldquo;Mark Zuckerberg&rdquo;,<br />
+  &ldquo;first_name&rdquo;: &ldquo;Mark&rdquo;,<br />
+  &ldquo;last_name&rdquo;: &ldquo;Zuckerberg&rdquo;,<br />
+  &ldquo;link&rdquo;: &ldquo;<a href="https://www.facebook.com/zuck&quot;">https://www.facebook.com/zuck&quot;</a>,<br />
+  &ldquo;hometown&rdquo;: {<br />
+    &ldquo;id&rdquo;: &ldquo;105506396148790&rdquo;,<br />
+    &ldquo;name&rdquo;: &ldquo;Dobbs Ferry, New York&rdquo;<br />
+  },<br />
+  &ldquo;location&rdquo;: {<br />
+    &ldquo;id&rdquo;: &ldquo;104022926303756&rdquo;,<br />
+    &ldquo;name&rdquo;: &ldquo;Palo Alto, California&rdquo;<br />
+  },<br />
+  &ldquo;bio&rdquo;: &ldquo;I&rsquo;m trying to make the world a more open place.&rdquo;,<br />
+  &ldquo;quotes&rdquo;: &ldquo;\&ldquo;Fortune favors the bold.\&ldquo;\r\n- Virgil, Aeneid X.284\r\n\r\n\&ldquo;All children are artists. The problem is how to remain an artist once you grow up.\&rdquo; \r\n- Pablo Picasso\r\n\r\n\&ldquo;Make things as simple as possible but no simpler.\&ldquo;\r\n- Albert Einstein&rdquo;,<br />
+  &ldquo;work&rdquo;: [<br />
+    {<br />
+      &ldquo;employer&rdquo;: {<br />
+        &ldquo;id&rdquo;: &ldquo;20531316728&rdquo;,<br />
+        &ldquo;name&rdquo;: &ldquo;Facebook&rdquo;<br />
+      },<br />
+      &ldquo;location&rdquo;: {<br />
+        &ldquo;id&rdquo;: &ldquo;104022926303756&rdquo;,<br />
+        &ldquo;name&rdquo;: &ldquo;Palo Alto, California&rdquo;<br />
+      },<br />
+      &ldquo;position&rdquo;: {<br />
+        &ldquo;id&rdquo;: &ldquo;142979352398617&rdquo;,<br />
+        &ldquo;name&rdquo;: &ldquo;Founder and CEO&rdquo;<br />
+      },<br />
+      &ldquo;description&rdquo;: &ldquo;Making the world more open and connected.&rdquo;,<br />
+      &ldquo;start_date&rdquo;: &ldquo;2004-02-04&rdquo;<br />
+    }<br />
+  ],<br />
+  &hellip;</p>
+
+<p>&ldquo;gender&rdquo;: &ldquo;male&rdquo;,<br />
+  &ldquo;locale&rdquo;: &ldquo;en_US&rdquo;,<br />
+  &ldquo;languages&rdquo;: [<br />
+    {<br />
+      &ldquo;id&rdquo;: &ldquo;106059522759137&rdquo;,<br />
+      &ldquo;name&rdquo;: &ldquo;English&rdquo;<br />
+    },<br />
+    {<br />
+      &ldquo;id&rdquo;: &ldquo;103088979730830&rdquo;,<br />
+      &ldquo;name&rdquo;: &ldquo;Mandarin Chinese&rdquo;<br />
+    }<br />
+  ],<br />
+  &ldquo;updated_time&rdquo;: &ldquo;2013-12-11T23:12:52+0000&rdquo;,<br />
+  &ldquo;username&rdquo;: &ldquo;zuck&rdquo;<br />
+}</p>
+
+<p>Now, if I wanted to filter by specific fields. I could simply query.</p>
+
+<p>/4?fields=name,id,link</p>
+
+<p>and the result would be</p>
+
+<p>{<br />
+  &ldquo;name&rdquo;: &ldquo;Mark Zuckerberg&rdquo;,<br />
+  &ldquo;id&rdquo;: &ldquo;4&rdquo;,<br />
+  &ldquo;link&rdquo;: &ldquo;<a href="https://www.facebook.com/zuck&quot;">https://www.facebook.com/zuck&quot;</a><br />
+}</p>
+
+<p>And what&rsquo;s even cooler is the Facebook Query Language (FQL) which allows you to do more complicated queries, using many of the features of SQL. Here is an example:</p>
+
+<p>SELECT first_name, last_name from user where uid =4 ;</p>
+
+<p>this would result in the response:</p>
+
+<p>{<br />
+  &ldquo;data&rdquo;: [<br />
+    {<br />
+      &ldquo;first_name&rdquo;: &ldquo;Mark&rdquo;,<br />
+      &ldquo;last_name&rdquo;: &ldquo;Zuckerberg&rdquo;<br />
+    }<br />
+  ]<br />
+}</p>
+
+<p>All of these may be tested with an access token or alternatively using the <a href="https://developers.facebook.com/tools/explorer/">Graph API Explorer</a>. I will also blog about more complicated Facebook Queries in the near future.</p>
+
+<h3 id="instagram-solution">Instagram Solution</h3>
+
+<p>The Instagram API does not contain these filtering features. That is, if we want data of one specific person, at a specific location we would need to use the <em>location</em> api and traverse every record to check if the specific person exists. In addition to this, <strong>the Instagram API has a limit on how many records are displayed per call</strong>, meaning that not all the records can be viewed at one time.</p>
+
+<p>Using the Facebook Graph API (or FQL) we simply pass an extremely large limit.</p>
+
+<p>For example getting a subset of people who have tagged the_ Rag and Famish_ we would call:</p>
+
+<p>/locations/604145/media/recent</p>
+
+<p>this would yield</p>
+
+<p>{<br />
+    &ldquo;pagination&rdquo;: {<br />
+        &ldquo;next_url&rdquo;: &ldquo;<a href="https://api.instagram.com/v1/locations/604145/media/recent?max_id=645281964529741622&amp;client_id=f0f2f52cb6d046d68ded60b896bb0428&quot;">https://api.instagram.com/v1/locations/604145/media/recent?max_id=645281964529741622&amp;client_id=f0f2f52cb6d046d68ded60b896bb0428&quot;</a>,<br />
+        &ldquo;next_max_id&rdquo;: &ldquo;645281964529741622&rdquo;<br />
+    },<br />
+    &ldquo;meta&rdquo;: {<br />
+        &ldquo;code&rdquo;: 200<br />
+    },<br />
+    &ldquo;data&rdquo;: [</p>
+
+<pre><code>    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[  
+            &quot;regram&quot;,  
+            &quot;growlers&quot;,  
+            &quot;ragandfamish&quot;,  
+            &quot;draughtbeerathome&quot;,  
+            &quot;craftbeers&quot;  
+        \],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 0,  
+            &quot;data&quot;: \[\]  
+        },  
+        &quot;filter&quot;: &quot;Normal&quot;,  
+        &quot;created_time&quot;: &quot;1392148936&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/kSdm8Gwu2y/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 5,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;username&quot;: &quot;kylierobertsfrost&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_197831255\_75sq_1385208925.jpg&quot;,  
+                    &quot;id&quot;: &quot;197831255&quot;,  
+                    &quot;full_name&quot;: &quot;kylierobertsfrost&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;sachandpete&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_195935360\_75sq_1372932809.jpg&quot;,  
+                    &quot;id&quot;: &quot;195935360&quot;,  
+                    &quot;full_name&quot;: &quot;sachandpete&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;robbiebarsman&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_749349673\_75sq_1386117520.jpg&quot;,  
+                    &quot;id&quot;: &quot;749349673&quot;,  
+                    &quot;full_name&quot;: &quot;Robbie Barsman&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;happyandhoppy&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_604192935\_75sq_1381672642.jpg&quot;,  
+                    &quot;id&quot;: &quot;604192935&quot;,  
+                    &quot;full_name&quot;: &quot;Happy &amp; Hoppy&quot;  
+                }  
+            \]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/12b0798a935711e3b4c6124d293a9c07_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/12b0798a935711e3b4c6124d293a9c07_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/12b0798a935711e3b4c6124d293a9c07_8.jpg&quot;,  
+                &quot;width&quot;: 640,  
+                &quot;height&quot;: 640  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[\],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1392148936&quot;,  
+            &quot;text&quot;: &quot;Best birthday present ever! Thanks @justinrob. #growlers #ragandfamish #regram #draughtbeerathome #craftbeers&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;ragandfamish&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_586799282\_75sq_1380774891.jpg&quot;,  
+                &quot;id&quot;: &quot;586799282&quot;,  
+                &quot;full_name&quot;: &quot;Rag and Famish&quot;  
+            },  
+            &quot;id&quot;: &quot;653715115635567907&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;653715115149028786_586799282&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;ragandfamish&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_586799282\_75sq_1380774891.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Rag and Famish&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;586799282&quot;  
+        }  
+    },  
+    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[  
+            &quot;valentinesday&quot;,  
+            &quot;lovers&quot;,  
+            &quot;ragandfamish&quot;  
+        \],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 0,  
+            &quot;data&quot;: \[\]  
+        },  
+        &quot;filter&quot;: &quot;Normal&quot;,  
+        &quot;created_time&quot;: &quot;1391992118&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/kNygM3Qu36/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 1,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;username&quot;: &quot;sachandpete&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_195935360\_75sq_1372932809.jpg&quot;,  
+                    &quot;id&quot;: &quot;195935360&quot;,  
+                    &quot;full_name&quot;: &quot;sachandpete&quot;  
+                }  
+            \]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/9ec9080891e811e38f95121378c087a7_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/9ec9080891e811e38f95121378c087a7_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/9ec9080891e811e38f95121378c087a7_8.jpg&quot;,  
+                &quot;width&quot;: 640,  
+                &quot;height&quot;: 640  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[\],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1391992118&quot;,  
+            &quot;text&quot;: &quot;Part of our 4 Course Valentines menu...Grilled Swordfish in an Enoki Mushroom &amp; Mussel Broth. #lovers #valentinesday #ragandfamish&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;ragandfamish&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_586799282\_75sq_1380774891.jpg&quot;,  
+                &quot;id&quot;: &quot;586799282&quot;,  
+                &quot;full_name&quot;: &quot;Rag and Famish&quot;  
+            },  
+            &quot;id&quot;: &quot;652399637080239627&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;652399636199435770_586799282&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;ragandfamish&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_586799282\_75sq_1380774891.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Rag and Famish&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;586799282&quot;  
+        }  
+    },  
+    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[  
+            &quot;beer&quot;,  
+            &quot;growler&quot;,  
+            &quot;northsydney&quot;,  
+            &quot;publife&quot;,  
+            &quot;beerporn&quot;,  
+            &quot;sundaypublunch&quot;  
+        \],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 1,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;created_time&quot;: &quot;1391940266&quot;,  
+                    &quot;text&quot;: &quot;@ragandfamish #northsydney #publife #sundaypublunch #growler #beer #beerporn&quot;,  
+                    &quot;from&quot;: {  
+                        &quot;username&quot;: &quot;justinrob&quot;,  
+                        &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_989651\_75sq_1388267331.jpg&quot;,  
+                        &quot;id&quot;: &quot;989651&quot;,  
+                        &quot;full_name&quot;: &quot;Justin Roberts&quot;  
+                    },  
+                    &quot;id&quot;: &quot;651964667522494700&quot;  
+                }  
+            \]  
+        },  
+        &quot;filter&quot;: &quot;Earlybird&quot;,  
+        &quot;created_time&quot;: &quot;1391927371&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/kL3AcXyLJc/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 11,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;username&quot;: &quot;kylierobertsfrost&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_197831255\_75sq_1385208925.jpg&quot;,  
+                    &quot;id&quot;: &quot;197831255&quot;,  
+                    &quot;full_name&quot;: &quot;kylierobertsfrost&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;lakieshavictoria&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_540626969\_75sq_1390767554.jpg&quot;,  
+                    &quot;id&quot;: &quot;540626969&quot;,  
+                    &quot;full_name&quot;: &quot;Lakiesha&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;lightmoods&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_244107098\_75sq_1355083432.jpg&quot;,  
+                    &quot;id&quot;: &quot;244107098&quot;,  
+                    &quot;full_name&quot;: &quot;Paul Foley&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;jilltitle&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_192499308\_75sq_1377830018.jpg&quot;,  
+                    &quot;id&quot;: &quot;192499308&quot;,  
+                    &quot;full_name&quot;: &quot;Jill Title&quot;  
+                }  
+            \]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/de5d60c2915211e3864a1248f379be2f_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/de5d60c2915211e3864a1248f379be2f_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage7.s3.amazonaws.com/de5d60c2915211e3864a1248f379be2f_8.jpg&quot;,  
+                &quot;width&quot;: 640,  
+                &quot;height&quot;: 640  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[\],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1391927371&quot;,  
+            &quot;text&quot;: &quot;Lunch with the out-laws for Jacks B'day. Of course I had to buy him a growler!&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;justinrob&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_989651\_75sq_1388267331.jpg&quot;,  
+                &quot;id&quot;: &quot;989651&quot;,  
+                &quot;full_name&quot;: &quot;Justin Roberts&quot;  
+            },  
+            &quot;id&quot;: &quot;651856494543287242&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;651856494107079260_989651&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;justinrob&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_989651\_75sq_1388267331.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Justin Roberts&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;989651&quot;  
+        }  
+    },  
+    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[  
+            &quot;lunch&quot;,  
+            &quot;ragandfamish&quot;,  
+            &quot;northsydney&quot;  
+        \],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 0,  
+            &quot;data&quot;: \[\]  
+        },  
+        &quot;filter&quot;: &quot;Normal&quot;,  
+        &quot;created_time&quot;: &quot;1391652458&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/kDqpzNskB3/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 17,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;username&quot;: &quot;coffeeaspirin&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_28373215\_75sq_1360585473.jpg&quot;,  
+                    &quot;id&quot;: &quot;28373215&quot;,  
+                    &quot;full_name&quot;: &quot;coffeeaspirin&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;fumi_aji&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_37249123\_75sq_1387766058.jpg&quot;,  
+                    &quot;id&quot;: &quot;37249123&quot;,  
+                    &quot;full_name&quot;: &quot;fumi_aji&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;beckswg&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_181392294\_75sq_1356522218.jpg&quot;,  
+                    &quot;id&quot;: &quot;181392294&quot;,  
+                    &quot;full_name&quot;: &quot;beckswg&quot;  
+                }  
+            \]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage10.s3.amazonaws.com/593733d68ed311e387660e5ea1863fce_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage10.s3.amazonaws.com/593733d68ed311e387660e5ea1863fce_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage10.s3.amazonaws.com/593733d68ed311e387660e5ea1863fce_8.jpg&quot;,  
+                &quot;width&quot;: 640,  
+                &quot;height&quot;: 640  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[\],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1391652458&quot;,  
+            &quot;text&quot;: &quot;Team #lunch! #northsydney #ragandfamish&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;coffeeaspirin&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_28373215\_75sq_1360585473.jpg&quot;,  
+                &quot;id&quot;: &quot;28373215&quot;,  
+                &quot;full_name&quot;: &quot;coffeeaspirin&quot;  
+            },  
+            &quot;id&quot;: &quot;649550362477478754&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;649550361714114679_28373215&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;coffeeaspirin&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_28373215\_75sq_1360585473.jpg&quot;,  
+            &quot;full_name&quot;: &quot;coffeeaspirin&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;28373215&quot;  
+        }  
+    },  
+    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[  
+            &quot;healthylunch&quot;,  
+            &quot;longlunch&quot;,  
+            &quot;japaneseinspired&quot;,  
+            &quot;delish&quot;,  
+            &quot;salmon&quot;,  
+            &quot;ragandfamish&quot;,  
+            &quot;itsnearlytheweekend&quot;  
+        \],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 1,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;created_time&quot;: &quot;1391648089&quot;,  
+                    &quot;text&quot;: &quot;I had it yesterday. Amazing! ❤❤❤&quot;,  
+                    &quot;from&quot;: {  
+                        &quot;username&quot;: &quot;soey01&quot;,  
+                        &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_55967742\_75sq_1340531322.jpg&quot;,  
+                        &quot;id&quot;: &quot;55967742&quot;,  
+                        &quot;full_name&quot;: &quot;soey01&quot;  
+                    },  
+                    &quot;id&quot;: &quot;649513705268243888&quot;  
+                }  
+            \]  
+        },  
+        &quot;filter&quot;: &quot;Normal&quot;,  
+        &quot;created_time&quot;: &quot;1391647735&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/kDhpQ-Qu-s/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 2,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;username&quot;: &quot;sachandpete&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_195935360\_75sq_1372932809.jpg&quot;,  
+                    &quot;id&quot;: &quot;195935360&quot;,  
+                    &quot;full_name&quot;: &quot;sachandpete&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;xjenaleighx&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_403229736\_75sq_1385275310.jpg&quot;,  
+                    &quot;id&quot;: &quot;403229736&quot;,  
+                    &quot;full_name&quot;: &quot;JeNaLeigh&quot;  
+                }  
+            \]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage4.s3.amazonaws.com/5a2ea7c68ec711e3afc512c1a4977290_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage4.s3.amazonaws.com/5a2ea7c68ec711e3afc512c1a4977290_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage4.s3.amazonaws.com/5a2ea7c68ec711e3afc512c1a4977290_8.jpg&quot;,  
+                &quot;width&quot;: 640,  
+                &quot;height&quot;: 640  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[\],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1391647735&quot;,  
+            &quot;text&quot;: &quot;Perfect weather for a long lunch @ragandfamish. Try our Oven Baked Miso Salmon Fillet w cucumber, celery &amp; wakame salad, on mashed potato and a soy &amp; ginger sauce. #delish #healthylunch #longlunch #ragandfamish #salmon #japaneseinspired #itsnearlytheweekend&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;ragandfamish&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_586799282\_75sq_1380774891.jpg&quot;,  
+                &quot;id&quot;: &quot;586799282&quot;,  
+                &quot;full_name&quot;: &quot;Rag and Famish&quot;  
+            },  
+            &quot;id&quot;: &quot;649510743066209558&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;649510742529339308_586799282&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;ragandfamish&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_586799282\_75sq_1380774891.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Rag and Famish&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;586799282&quot;  
+        }  
+    },  
+    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[  
+            &quot;getserious&quot;,  
+            &quot;tuesdaytrivia&quot;  
+        \],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 0,  
+            &quot;data&quot;: \[\]  
+        },  
+        &quot;filter&quot;: &quot;Mayfair&quot;,  
+        &quot;created_time&quot;: &quot;1391504427&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/j_QTlGIzbd/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 10,  
+            &quot;data&quot;: \[  
+                {  
+                    &quot;username&quot;: &quot;india_e&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_44498065\_75sq_1373640663.jpg&quot;,  
+                    &quot;id&quot;: &quot;44498065&quot;,  
+                    &quot;full_name&quot;: &quot;India Edwards&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;lanaisadora&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_31316068\_75sq_1380689500.jpg&quot;,  
+                    &quot;id&quot;: &quot;31316068&quot;,  
+                    &quot;full_name&quot;: &quot;Lana Smith&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;indyhd&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_25219316\_75sq_1372308574.jpg&quot;,  
+                    &quot;id&quot;: &quot;25219316&quot;,  
+                    &quot;full_name&quot;: &quot;Ijhd&quot;  
+                },  
+                {  
+                    &quot;username&quot;: &quot;victoriaslessar&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_522809125\_75sq_1383365216.jpg&quot;,  
+                    &quot;id&quot;: &quot;522809125&quot;,  
+                    &quot;full_name&quot;: &quot;victoriaslessar&quot;  
+                }  
+            \]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage1.s3.amazonaws.com/ca9f0de68d7a11e3b1e712b84915c4bd_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage1.s3.amazonaws.com/ca9f0de68d7a11e3b1e712b84915c4bd_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage1.s3.amazonaws.com/ca9f0de68d7a11e3b1e712b84915c4bd_8.jpg&quot;,  
+                &quot;width&quot;: 640,  
+                &quot;height&quot;: 640  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[  
+            {  
+                &quot;position&quot;: {  
+                    &quot;y&quot;: 0.423437506,  
+                    &quot;x&quot;: 0.287499994  
+                },  
+                &quot;user&quot;: {  
+                    &quot;username&quot;: &quot;charleethegirl&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_13826640\_75sq_1382712968.jpg&quot;,  
+                    &quot;id&quot;: &quot;13826640&quot;,  
+                    &quot;full_name&quot;: &quot;! charlotterose&quot;  
+                }  
+            },  
+            {  
+                &quot;position&quot;: {  
+                    &quot;y&quot;: 0.418749988,  
+                    &quot;x&quot;: 0.659375012  
+                },  
+                &quot;user&quot;: {  
+                    &quot;username&quot;: &quot;_calum2510&quot;,  
+                    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_181622299\_75sq_1383456373.jpg&quot;,  
+                    &quot;id&quot;: &quot;181622299&quot;,  
+                    &quot;full_name&quot;: &quot;Calum Robertson&quot;  
+                }  
+            }  
+        \],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1391504465&quot;,  
+            &quot;text&quot;: &quot;I don't know where I find these people @charleethegirl @_calum2510 #tuesdaytrivia #getserious ✌️&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;elm_evaclose&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_199632252\_75sq_1392511005.jpg&quot;,  
+                &quot;id&quot;: &quot;199632252&quot;,  
+                &quot;full_name&quot;: &quot;Eva Close&quot;  
+            },  
+            &quot;id&quot;: &quot;648308905367255001&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;648308585610295005_199632252&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;elm_evaclose&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_199632252\_75sq_1392511005.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Eva Close&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;199632252&quot;  
+        }  
+    }
+
+\]  
+</code></pre>
+
+<p>}</p>
+
+<p>Notice the pagination? So to get all the data, we would need to create a function that simply gets all the data from Instagram. Unfortunately, there is no way around this other than making multiple calls. Below is an example. The key to this, is to keep on making requests until the <strong>pagination</strong> object is empty.</p>
+
+<p>yourClientId = &ldquo;XXXX&rdquo;</p>
+
+<p>pages = &ldquo;[&rdquo;<br />
+location = &ldquo;604145&rdquo;#Rag and Famish North Sydney!<br />
+api = &ldquo;<a href="https://api.instagram.com/v1/locations/{0}/media/recent?client_id={1}&quot;.format(location,yourClientId">https://api.instagram.com/v1/locations/{0}/media/recent?client_id={1}&quot;.format(location,yourClientId</a>)<br />
+print api<br />
+while True:<br />
+    r = requests.get(api)<br />
+    instagramEnvelope =  r.json();<br />
+    pagination = instagramEnvelope[&ldquo;pagination&rdquo;]<br />
+    if not pagination:<br />
+        pages = pages[:-1]<br />
+        break<br />
+    pages += r.text<br />
+    pages += &ldquo;,&rdquo;<br />
+    api = pagination[&ldquo;next_url&rdquo;]<br />
+pages += &ldquo;]&ldquo;</p>
+
+<p>Now! I want to extract all the times a specific user (id=3419631) tagged a specific location (say the Rag and Famish id=604145). Using a traditional method I would need to traverse each object for comparison..</p>
+
+<p>Something similar to this:</p>
+
+<p>def iterateWay(igUserToFind):<br />
+    pagesArray = json.loads(pages)<br />
+    for page in pagesArray:<br />
+        for location in page[&ldquo;data&rdquo;]:<br />
+            if location[&ldquo;user&rdquo;][&ldquo;id&rdquo;] == igUserToFind:<br />
+                print(datetime.datetime.fromtimestamp(int(location[&ldquo;created_time&rdquo;])).strftime(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;))</p>
+
+<h4 id="the-solution">The Solution</h4>
+
+<p>One word - Regex. I guess this whole blog post can be summarised in this one word.</p>
+
+<p>The Regex to extract a specific user would be</p>
+
+<p>&ldquo;user&rdquo;:\s+({[^}]+((&ldquo;3419631&rdquo;))[^}]+})</p>
+
+<p>The problem with this however, is that it only extracts a user JSON object. That is, it will only match an object below:</p>
+
+<pre><code>        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;lyntonmanuel&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_3419631\_75sq_1314210559.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Lynton Manuel&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;3419631&quot;  
+        }  
+</code></pre>
+
+<p>What we require as well, however, is the super object of this user object. That is, we require the object below:</p>
+
+<pre><code>    {  
+        &quot;attribution&quot;: null,  
+        &quot;tags&quot;: \[\],  
+        &quot;location&quot;: {  
+            &quot;latitude&quot;: -33.836733742,  
+            &quot;name&quot;: &quot;Rag and Famish Hotel&quot;,  
+            &quot;longitude&quot;: 151.207236114,  
+            &quot;id&quot;: 604145  
+        },  
+        &quot;comments&quot;: {  
+            &quot;count&quot;: 0,  
+            &quot;data&quot;: \[\]  
+        },  
+        &quot;filter&quot;: &quot;Rise&quot;,  
+        &quot;created_time&quot;: &quot;1320721905&quot;,  
+        &quot;link&quot;: &quot;http://instagram.com/p/TOK6u/&quot;,  
+        &quot;likes&quot;: {  
+            &quot;count&quot;: 0,  
+            &quot;data&quot;: \[\]  
+        },  
+        &quot;images&quot;: {  
+            &quot;low_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage6.s3.amazonaws.com/63f931aa09b711e180c9123138016265_6.jpg&quot;,  
+                &quot;width&quot;: 306,  
+                &quot;height&quot;: 306  
+            },  
+            &quot;thumbnail&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage6.s3.amazonaws.com/63f931aa09b711e180c9123138016265_5.jpg&quot;,  
+                &quot;width&quot;: 150,  
+                &quot;height&quot;: 150  
+            },  
+            &quot;standard_resolution&quot;: {  
+                &quot;url&quot;: &quot;http://distilleryimage6.s3.amazonaws.com/63f931aa09b711e180c9123138016265_7.jpg&quot;,  
+                &quot;width&quot;: 612,  
+                &quot;height&quot;: 612  
+            }  
+        },  
+        &quot;users\_in\_photo&quot;: \[\],  
+        &quot;caption&quot;: {  
+            &quot;created_time&quot;: &quot;1320721933&quot;,  
+            &quot;text&quot;: &quot;The 'Rag'&quot;,  
+            &quot;from&quot;: {  
+                &quot;username&quot;: &quot;lyntonmanuel&quot;,  
+                &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_3419631\_75sq_1314210559.jpg&quot;,  
+                &quot;id&quot;: &quot;3419631&quot;,  
+                &quot;full_name&quot;: &quot;Lynton Manuel&quot;  
+            },  
+            &quot;id&quot;: &quot;403277727&quot;  
+        },  
+        &quot;type&quot;: &quot;image&quot;,  
+        &quot;id&quot;: &quot;322481838_3419631&quot;,  
+        &quot;user&quot;: {  
+            &quot;username&quot;: &quot;lyntonmanuel&quot;,  
+            &quot;website&quot;: &quot;&quot;,  
+            &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_3419631\_75sq_1314210559.jpg&quot;,  
+            &quot;full_name&quot;: &quot;Lynton Manuel&quot;,  
+            &quot;bio&quot;: &quot;&quot;,  
+            &quot;id&quot;: &quot;3419631&quot;  
+        }  
+    }  
+</code></pre>
+
+<p>Using the object above (let&rsquo;s call it the location object), we can get information such as the time the user tagged the <em>Rag and Famish</em>. But how do we get the location object? We know that using Regex for hierarchical object is well&hellip;..simply evil.</p>
+
+<p>So how do we get the location object? First, let&rsquo;s make assumptions:</p>
+
+<ol>
+<li>We assume that the User object will always be directly inside the location object. That is, it will be a directly child of the location object. With one degree of separation.</li>
+<li>We assume that the User object may be in any position inside the location object (that is, not the last object like the example above).</li>
+<li>That there is no &lsquo;{&rsquo; or &lsquo;}&rsquo; in the string parameters (although disregarding this wouldn&rsquo;t be too difficult)</li>
+</ol>
+
+<p>The first step is extracting the user object. This is done as below:</p>
+
+<p>def regexWay(igUserToFind):<br />
+    p = re.compile(r&rsquo;&ldquo;user&rdquo;:\s<em>({[^}]</em>((&ldquo;&lsquo;+igUserToFind+&rsquo;&rdquo;))[^}]*})&lsquo;,re.DOTALL)<br />
+    for found in re.finditer(p,pages):<br />
+        found.end()</p>
+
+<p>Here you can see that we find the exact position of the last character of the user object. That is, the enclosing &lsquo;}&rsquo;.</p>
+
+<p>The upcoming explanation assumes there will be character traversals in the whole string from Instagram.</p>
+
+<p>Now, because of assumption 1 we know that the object directly outside the user object is the location object. But if we traverse the string until we find a &lsquo;}&rsquo; we could fall into an error, <strong>as there may be another object within the location object (remember assumption 2) after the user object</strong>. for example, we could end up extracting a string like below if we simply traverse the string down to the next &lsquo;}&rsquo; character.</p>
+
+<pre><code>&quot;user&quot;: {  
+    &quot;username&quot;: &quot;lyntonmanuel&quot;,  
+    &quot;website&quot;: &quot;&quot;,  
+    &quot;profile_picture&quot;: &quot;http://images.ak.instagram.com/profiles/profile\_3419631\_75sq_1314210559.jpg&quot;,  
+    &quot;full_name&quot;: &quot;Lynton Manuel&quot;,  
+    &quot;bio&quot;: &quot;&quot;,  
+    &quot;id&quot;: &quot;3419631&quot;  
+},  
+&quot;Another&quot;: {  
+    &quot;foo&quot;: &quot;bar&quot;  
+}  
+</code></pre>
+
+<p>So what is the solution? <strong>using a retention count</strong>. That is, when traversing the string down, every time we find a &lsquo;}&rsquo; we add 1 to the retention count and every time we find a&rsquo;{&rsquo; subtract 1.</p>
+
+<p>We initialise the retention count at -1, as we are currently at the enclosing &lsquo;}&rsquo; of the user object. (you may have notice here that when the retention count is -1 on the &lsquo;}&rsquo; the object is a direct child, when it is -2 it is a grandchild etc).</p>
+
+<p>We keep on traversing the string until it reaches 0. At this point we know we have reached the closing &lsquo;}&rsquo; of the location object. Below is an example:</p>
+
+<p>def getLocationObject(index):<br />
+    retentionCount = -1<br />
+    while retentionCount != 0:<br />
+        if pages[index] == &ldquo;}&rdquo;:<br />
+            retentionCount += 1<br />
+        elif pages[index] == &ldquo;{&rdquo;:<br />
+            retentionCount -= 1<br />
+        index += 1<br />
+    index -= 1;<br />
+    endIndex = index</p>
+
+<p>To get the opening &lsquo;{&rsquo; we do the exact same thing, but instead of traversing forwards. We traverse backwards. The example shows how to get the start and end index of the location object and extract it:</p>
+
+<p>def getLocationObject(index):<br />
+    retentionCount = -1<br />
+    while retentionCount != 0:<br />
+        if pages[index] == &ldquo;}&rdquo;:<br />
+            retentionCount += 1<br />
+        elif pages[index] == &ldquo;{&rdquo;:<br />
+            retentionCount -= 1<br />
+        index += 1<br />
+    index -= 1;<br />
+    endIndex = index<br />
+    index -= 1<br />
+    while retentionCount != -1:<br />
+        if pages[index] == &ldquo;}&rdquo;:<br />
+            retentionCount += 1<br />
+        elif pages[index] == &ldquo;{&rdquo;:<br />
+            retentionCount -= 1<br />
+        index -= 1<br />
+    startIndex = index + 1<br />
+    objectJson = pages[startIndex:endIndex +1]<br />
+    return json.loads(objectJson)</p>
+
+<p>The function regexWay then becomes:</p>
+
+<p>def regexWay(igUserToFind):<br />
+    p = re.compile(r&rsquo;&ldquo;user&rdquo;:\s<em>({[^}]</em>((&ldquo;&lsquo;+igUserToFind+&rsquo;&rdquo;))[^}]*})&lsquo;,re.DOTALL)<br />
+    for found in re.finditer(p,pages):<br />
+        location = getLocationObject(found.end())<br />
+        print(datetime.datetime.fromtimestamp(int(location[&ldquo;created_time&rdquo;])).strftime(&lsquo;%Y-%m-%d %H:%M:%S&rsquo;))</p>
+
+<p>Now, in this example we used a retention count. But if it makes more sense to some, two counters could have been used. An &lsquo;openingBracketCount&rsquo; and a &lsquo;closingBracketCount&rsquo;. The biases for each would be set in the same way. But I will leave it to you to figure it out ;-)</p>
+
+<p>That&rsquo;s it!!</p>
+
+<h3 id="conclusion-and-results">Conclusion and Results</h3>
+
+<p>So what are the results and conclusion? We found that using Regex to filter the Instagram API performs at <strong>least half the speed </strong>as traditional traversals.</p>
+
+<p>If you don&rsquo;t believe me? <a href="https://github.com/RaphAustralia/IgAPIFiltering">Here clone the code yourself and do some experiments</a>.</p>
+
+<p>Step1: Remember to change the variable yourClientId to your own client id.<br />
+Step2: Run the program using Python interactive mode.</p>
+
+<p>Run the program using interactive mode</p>
+
+<p>python -i IgAPIFiltering.py</p>
+
+<p>and try the program by typing timeRegexWay([user_id]) and timeIterateWay([user_id])</p>
+
+<blockquote>
+<blockquote>
+<p>&gt; timeIterateWay(&ldquo;3419631&rdquo;)<br />
+2012-03-22 13:52:11<br />
+2011-12-29 13:51:52<br />
+2011-12-28 13:38:22<br />
+0.0230000019073 seconds for iteration<br />
+&gt; timeRegexWay(&ldquo;3419631&rdquo;)<br />
+2012-03-22 13:52:11<br />
+2011-12-29 13:51:52<br />
+2011-12-28 13:38:22<br />
+0.00400018692017 seconds for regex</p>
+</blockquote>
+</blockquote>
+
+<p>Thanks for reading. Have a good day :)</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        
+        <li>
+            <a href="http://example.org/posts/instagram-api-filtering-comments/">Instagram API filtering (or querying) <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vsts on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/vsts/</link>
+    <description>Recent content in Vsts on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 27 Mar 2018 16:14:00 +1100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/vsts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Build and Release Pipeline for Your Own Custom VSTS Tasks</title>
+      <link>http://example.org/posts/build-and-release-pipeline-for-your-own-comments/</link>
+      <pubDate>Tue, 27 Mar 2018 16:14:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/build-and-release-pipeline-for-your-own-comments/</guid>
+      <description>Best post Michele H. Elam - Oct 1, 2018
+Best post Once in a while, the Hosted Agents won&amp;rsquo;t have &amp;hellip; Maria R. Brown - Oct 1, 2018
+Once in a while, the Hosted Agents won&amp;rsquo;t have the product you need, or you may need an especially husky form have. VSTS additionally gives you a chance to bring your own operator, where you can do whatever you need. This is awesome, however now you have to look after (read: pay for) a VM that is prepared to acknowledge employments.</description>
+    </item>
+    
+    <item>
+      <title>Build and Release Pipeline for Your Own Custom VSTS Tasks</title>
+      <link>http://example.org/posts/build-and-release-pipeline-for-your-own/</link>
+      <pubDate>Tue, 27 Mar 2018 16:14:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/build-and-release-pipeline-for-your-own/</guid>
+      <description>Anyone can create their own custom VSTS tasks and put them on the VSTS marketplace. There are tons of these custom tasks and they can be published publicly into the marketplace or privately into your own instance of VSTS. This blog post will demonstrate how to setup a build and release pipeline for these custom tasks (using custom VSTS tasks!).
+There are many reasons to create your own tasks on an instance of VSTS.</description>
+    </item>
+    
+  </channel>
+</rss>

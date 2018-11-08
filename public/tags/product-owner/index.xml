@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Product Owner on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/product-owner/</link>
+    <description>Recent content in Product Owner on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 31 Aug 2015 14:49:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/product-owner/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Disaster (security or otherwise) in an agile (scrum) environment</title>
+      <link>http://example.org/posts/disaster-security-or-otherwise-in-agile/</link>
+      <pubDate>Mon, 31 Aug 2015 14:49:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/disaster-security-or-otherwise-in-agile/</guid>
+      <description>When a disaster occurs in a system. Be that security, data or accidental the first thing that occurs in the psyche of the whole scrum team is:
+Something, unusual has happened. Something different has happened. What do we do? What are the next steps.
+The very definition of disaster in the Macquarie Dictionary alludes to this.
+disaster
+ Pronunciation of disaster /dəˈzastə/ (say duh&amp;rsquo;zahstuh)
+noun 1. any unfortunate event, especially a sudden or great misfortune.</description>
+    </item>
+    
+  </channel>
+</rss>

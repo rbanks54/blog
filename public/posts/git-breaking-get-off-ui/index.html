@@ -1,0 +1,135 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Git breaking? Get off the UI</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-01-08T09:24:00&#43;11:00">Jan 8, 2018</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/team-work/">#team work</a>
+                
+                    , 
+                    <a href="/tags/git/">#git</a>
+                
+            </em>
+        </li>
+        
+
+        <li>2 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>Git is perhaps the best VCS I&rsquo;ve used in my life. However, some of the things I always hear when people are trying to learn Git, or have used it for a while but never in larger teams are:<br />
+&ldquo;something stuffed up my Git&rdquo;<br />
+&ldquo;my Git is broken&rdquo;</p>
+
+<p>In my experience, Git is probably the most predictable, deterministic tool I&rsquo;ve ever used (thankfully, considering it does version your code!).</p>
+
+<p><img src="https://1.bp.blogspot.com/-DvFpe5e5p3Y/WlKdoabWtXI/AAAAAAAAPcU/nZb9JM9I85M4JKc5KRthW-Suh98YROILACLcBGAs/s320/512px-Git-logo.svg%255B1%255D.png" alt="" /></p>
+
+<p>git logo. Source: <a href="https://commons.wikimedia.org/wiki/Main_Page">Wikimedia Commons</a></p>
+
+<p>About 9 times out of 10 the people saying things like the above are those who are relying on a GUI abstraction-tool of Git, whether they be GitExtentions, SourceTree, Visual Studio Team Explorer or others. Whilst I don&rsquo;t think these GUI abstractions are bad in and of themselves (in fact, I like using GitExtensions to visualise graphs and diffs). They don&rsquo;t allow you to understand the more intricate details of Git such as: branching, rebasing, cherry-picking, ref-logs, remotes, branch tracking, tagging, and squashing.</p>
+
+<p>Going back to the breakages that are complained about above. These occur when: people pulling a main-line (master) branch into their feature branch, committing into the main-line (master) branch instead of a feature branch, or a bunch of merge conflicts because a sync hasn&rsquo;t been done for a while. These &lsquo;breakages&rsquo; more often than not can be avoided if there is a more intimate understanding of Git.</p>
+
+<p>Using the command line allows you to have this more intimate understanding of Git as no commands are abstracted away. Two more advantages to the command line are: Having a history of the operations that have been made on your repository. So if something has broken, you can have a rough idea of where it broken. And secondly, wider community support and reach when you do need to do a web search and get help.</p>
+
+<p>In conclusion, if you find yourself struggling with your Git repository and fiddling too much. I suggest that you uninstall your GUI abstraction tool. Start using Git on the command line, then slowly introduce helper tools, if you don&rsquo;t know where to start simply try git &ndash;help. If I can learn the command-line. I&rsquo;m more than confident you can too! The Git documentation is really easy to read and often a git status on your repository tells you exactly what you need to do to achieve what you want.</p>
+
+<p>Thank you for reading</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/i-dont-know/"><i class="fa fa-chevron-circle-left"></i> I Don&#39;t Know</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/my-top-3-development-tools/">My top 3 development tools <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

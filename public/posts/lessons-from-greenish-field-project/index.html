@@ -1,0 +1,134 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Lessons from a greenish-field project</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2016-01-21T15:18:00&#43;11:00">Jan 21, 2016</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/entity-framework/">#entity framework</a>
+                
+                    , 
+                    <a href="/tags/alm/">#alm</a>
+                
+                    , 
+                    <a href="/tags/projects/">#projects</a>
+                
+            </em>
+        </li>
+        
+
+        <li>2 min read</li>
+    </ul>
+</aside>
+    
+
+    
+
+<p>As consultants most of our work involves either PoCs or going into brownfield projects. However, recently I had the opportunity to go into a greenfield project, and below are the lessons I learnt.</p>
+
+<h2 id="don-t-over-engineer">Don&rsquo;t over engineer</h2>
+
+<p>The stack that I was using was pretty standard. Entity Framework + MVC5. However, at the end of the project I found that the architecture that I have created was overly complicated when it need not be. Using an ORM such as Entity framework means that you already have a pretty solid data access layer in-place. What I had done was abstract this data access layer away from the business layer so that the business layer is not calling any Entity Framework code at all. I found this design to be too complicated, because the layer that abstracts EF was basically a wrapper that pipes into EF. <strong>Next time, I would simply call EF from my business tier</strong>. There is nothing wrong with this as EF already implements a repository pattern.</p>
+
+<h2 id="don-t-prematurely-optimise">Don&rsquo;t prematurely optimise</h2>
+
+<p>Another error I fell into was that I had optimised too early. The result of the added optimisation meant that some of the code wasn&rsquo;t as readable as it should have been. Because this code was added early on in the solution it meant that it can potentially become code latter on that no one touches because no one really understands and is too scared to refactor (legacy? :P ). This is the type of code we do not want in any code-base.</p>
+
+<h2 id="performance-tests-and-logging">Performance tests and logging</h2>
+
+<p>Entity Framework makes it quite difficult to do bulk deletes and bulk updates without doing any round trips, so I tried to optimise for this earlier on (as stated in the previously, I wouldn&rsquo;t do this if I started another project). I believe there is more value in creating performance tests than there is spending time doing premature optimisations. Why? because performance tests give you an initial benchmark to compare against, so that <em>when and if</em> optimisations are needed we have the right benchmarks to compare against. A leader who has numbers on the product he/she leads is a leader who knows the software product well.</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/the-planning-implementation-balance/"><i class="fa fa-chevron-circle-left"></i> The &#34;planning &lt;--&gt; implementation&#34; balance</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/why-same-place-and-time-for-your-daily/">WHY the same place and time for your daily stand-up? <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,650 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>http://example.org/posts/</loc>
+    <lastmod>2018-11-03T12:13:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/healthy-backlogs/</loc>
+    <lastmod>2018-11-03T12:13:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/quality-and-pragmatism/</loc>
+    <lastmod>2018-09-27T17:10:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/do-you-know-what-i-mean/</loc>
+    <lastmod>2018-09-03T13:53:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/reboot-devops-part-iii/</loc>
+    <lastmod>2018-08-14T17:47:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/reboot-devops-part-ii/</loc>
+    <lastmod>2018-08-07T13:52:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/reboot-devops/</loc>
+    <lastmod>2018-07-24T09:54:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/standing-in-circle-clapping-is-not-agile/</loc>
+    <lastmod>2018-07-20T16:11:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/it-depends/</loc>
+    <lastmod>2018-07-02T12:33:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/stop-demonising-process/</loc>
+    <lastmod>2018-06-19T08:42:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/how-rock-climbing-cooking-and-weight/</loc>
+    <lastmod>2018-06-04T22:15:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/people-or-resources-lets-be-honest-with/</loc>
+    <lastmod>2018-05-23T21:11:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/scaling-agile-with-grc-governance-risk/</loc>
+    <lastmod>2018-05-10T10:11:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/book-review-leading-by-alex-ferguson/</loc>
+    <lastmod>2018-05-05T17:07:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/commerce-coffee-and-value/</loc>
+    <lastmod>2018-04-16T13:23:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/tips-to-automate-yourself-out-of-job/</loc>
+    <lastmod>2018-04-05T07:33:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/book-review-how-we-got-to-now-by-steve/</loc>
+    <lastmod>2018-03-27T20:14:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/build-and-release-pipeline-for-your-own-comments/</loc>
+    <lastmod>2018-03-27T16:14:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/build-and-release-pipeline-for-your-own/</loc>
+    <lastmod>2018-03-27T16:14:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/using-sbar-in-code-reviews/</loc>
+    <lastmod>2018-03-22T08:49:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/transformation-reorganisation-and/</loc>
+    <lastmod>2018-03-10T16:08:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/book-review-of-ted-talks-and-what-i-comments/</loc>
+    <lastmod>2018-03-02T09:07:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/book-review-of-ted-talks-and-what-i/</loc>
+    <lastmod>2018-03-02T09:07:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/hierarchy-dirty-word-comments/</loc>
+    <lastmod>2018-02-21T22:49:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/hierarchy-dirty-word/</loc>
+    <lastmod>2018-02-21T22:49:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/make-your-code-reviews-count/</loc>
+    <lastmod>2018-02-16T17:24:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/3-2-1-reveal-points-true-value-of-poker/</loc>
+    <lastmod>2018-02-08T09:00:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/my-top-3-development-tools/</loc>
+    <lastmod>2018-02-01T15:54:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/git-breaking-get-off-ui/</loc>
+    <lastmod>2018-01-08T09:24:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/i-dont-know/</loc>
+    <lastmod>2018-01-02T17:05:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/why-unit-testing-is-still-very-relevant/</loc>
+    <lastmod>2017-12-23T12:01:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/have-you-ever-produced-negative-value-comments/</loc>
+    <lastmod>2017-11-24T08:50:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/have-you-ever-produced-negative-value/</loc>
+    <lastmod>2017-11-24T08:50:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/from-zero-to-production-in-eighty-days/</loc>
+    <lastmod>2017-11-04T17:39:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/my-first-time-speaking-at-conference/</loc>
+    <lastmod>2017-09-28T09:19:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/context-and-agile-practices/</loc>
+    <lastmod>2017-09-15T08:36:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/leadership-maturity-and-authority/</loc>
+    <lastmod>2017-04-10T10:40:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/more-than-just-buildrelease-pipeline/</loc>
+    <lastmod>2016-08-19T16:42:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/on-premise-cicdcd-with-vstfs2015-and-iis/</loc>
+    <lastmod>2016-08-01T17:30:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/why-same-place-and-time-for-your-daily/</loc>
+    <lastmod>2016-07-18T20:20:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/lessons-from-greenish-field-project/</loc>
+    <lastmod>2016-01-21T15:18:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/the-planning-implementation-balance/</loc>
+    <lastmod>2015-11-20T10:27:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/disaster-security-or-otherwise-in-agile/</loc>
+    <lastmod>2015-08-31T14:49:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/deleteredeploy-azure-websites-at-comments/</loc>
+    <lastmod>2015-05-29T09:53:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/deleteredeploy-azure-websites-at/</loc>
+    <lastmod>2015-05-29T09:53:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/powershell-from-sourcetree-as-custom-comments/</loc>
+    <lastmod>2015-05-04T15:08:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/powershell-from-sourcetree-as-custom/</loc>
+    <lastmod>2015-05-04T15:08:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/create-certificate-for-use-with-azure-comments/</loc>
+    <lastmod>2015-04-17T14:53:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/create-certificate-for-use-with-azure/</loc>
+    <lastmod>2015-04-17T14:53:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/azure-24-to-25-upgrade-error-comments/</loc>
+    <lastmod>2015-03-11T09:51:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/azure-24-to-25-upgrade-error/</loc>
+    <lastmod>2015-03-11T09:51:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/json-serialisationdeserialisation-with-comments/</loc>
+    <lastmod>2014-12-02T14:38:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/json-serialisationdeserialisation-with/</loc>
+    <lastmod>2014-12-02T14:38:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/my-first-couple-of-weeks-at-readify/</loc>
+    <lastmod>2014-11-17T21:27:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/leaving-csb-engage/</loc>
+    <lastmod>2014-10-08T18:54:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/the-missing-piece-in-social-media/</loc>
+    <lastmod>2014-07-01T22:05:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/free-nexus-5-from-google/</loc>
+    <lastmod>2014-06-10T14:31:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/front-end-development-responsiblities-comments/</loc>
+    <lastmod>2014-03-26T22:29:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/front-end-development-responsiblities/</loc>
+    <lastmod>2014-03-26T22:29:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/bfs-and-dfs-with-python/</loc>
+    <lastmod>2014-02-25T14:37:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/instagram-api-filtering-comments/</loc>
+    <lastmod>2014-02-21T16:53:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/posts/instagram-api-filtering/</loc>
+    <lastmod>2014-02-21T16:53:00+11:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/.net/</loc>
+    <lastmod>2015-04-17T14:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/agile/</loc>
+    <lastmod>2018-11-03T12:13:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/alm/</loc>
+    <lastmod>2017-12-23T12:01:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/atlassian/</loc>
+    <lastmod>2015-05-04T15:08:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/automation/</loc>
+    <lastmod>2018-04-05T07:33:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/azure/</loc>
+    <lastmod>2015-04-17T14:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/book-review/</loc>
+    <lastmod>2018-05-05T17:07:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/c/</loc>
+    <lastmod>2014-12-02T14:38:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/cd/</loc>
+    <lastmod>2015-05-29T09:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/ci/</loc>
+    <lastmod>2015-05-29T09:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/computer-science/</loc>
+    <lastmod>2014-02-25T14:37:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/consulting/</loc>
+    <lastmod>2018-07-02T12:33:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/csb-engage/</loc>
+    <lastmod>2014-10-08T18:54:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/culture/</loc>
+    <lastmod>2018-02-21T22:49:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/data-structure-revision/</loc>
+    <lastmod>2014-02-25T14:37:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/devops/</loc>
+    <lastmod>2018-08-14T17:47:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/disaster/</loc>
+    <lastmod>2015-08-31T14:49:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/entity-framework/</loc>
+    <lastmod>2016-01-21T15:18:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/estimates/</loc>
+    <lastmod>2015-11-20T10:27:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/facebook-api/</loc>
+    <lastmod>2014-02-21T16:53:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/git/</loc>
+    <lastmod>2018-02-01T15:54:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/iis/</loc>
+    <lastmod>2016-08-01T17:30:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/instagraph-api/</loc>
+    <lastmod>2014-02-21T16:53:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/json/</loc>
+    <lastmod>2014-12-02T14:38:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/language/</loc>
+    <lastmod>2018-09-03T13:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/leadership/</loc>
+    <lastmod>2018-05-23T21:11:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/lean/</loc>
+    <lastmod>2018-04-16T13:23:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/learning/</loc>
+    <lastmod>2018-05-05T17:07:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/marketing/</loc>
+    <lastmod>2014-07-01T22:05:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/people/</loc>
+    <lastmod>2018-05-23T21:11:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/powershell/</loc>
+    <lastmod>2015-05-04T15:08:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/product-owner/</loc>
+    <lastmod>2015-08-31T14:49:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/projects/</loc>
+    <lastmod>2016-01-21T15:18:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/public-speaking/</loc>
+    <lastmod>2017-09-28T09:19:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/python/</loc>
+    <lastmod>2014-02-25T14:37:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/</loc>
+    <lastmod>2018-11-03T12:13:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/readify/</loc>
+    <lastmod>2014-10-08T18:54:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/reflection/</loc>
+    <lastmod>2018-09-03T13:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/regex/</loc>
+    <lastmod>2014-02-21T16:53:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/scale/</loc>
+    <lastmod>2018-05-10T10:11:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/scrum/</loc>
+    <lastmod>2015-11-20T10:27:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/security/</loc>
+    <lastmod>2015-08-31T14:49:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/serialisation/</loc>
+    <lastmod>2014-12-02T14:38:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/serialization/</loc>
+    <lastmod>2014-12-02T14:38:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/social-media/</loc>
+    <lastmod>2014-07-01T22:05:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/software-engineering/</loc>
+    <lastmod>2018-03-22T08:49:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/software-engineering-philosophy/</loc>
+    <lastmod>2018-04-05T07:33:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/sourcetree/</loc>
+    <lastmod>2015-05-04T15:08:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/</loc>
+    <lastmod>2015-04-17T14:53:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/team-work/</loc>
+    <lastmod>2018-08-14T17:47:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/testing/</loc>
+    <lastmod>2017-12-23T12:01:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/thoughts/</loc>
+    <lastmod>2014-03-26T22:29:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/user-experience/</loc>
+    <lastmod>2014-07-01T22:05:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/vstfs2015/</loc>
+    <lastmod>2016-08-01T17:30:00+10:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.org/tags/vsts/</loc>
+    <lastmod>2018-03-27T16:14:00+11:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

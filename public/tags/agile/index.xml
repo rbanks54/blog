@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agile on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/agile/</link>
+    <description>Recent content in Agile on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 03 Nov 2018 12:13:00 +1100</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Healthy Backlogs</title>
+      <link>http://example.org/posts/healthy-backlogs/</link>
+      <pubDate>Sat, 03 Nov 2018 12:13:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/healthy-backlogs/</guid>
+      <description>When I look at a healthy backlog, I feel that I&amp;rsquo;m going to achieve something, there&amp;rsquo;s often a sense of security within the team, and a healthy backlog generally means there&amp;rsquo;s little unplanned work being thrown towards the team. Feelings are important to the team and its members, and a healthy backlog can help with mood and emotions. In this post, I want to explain to you what I think the specifics are when I think of a healthy backlog, which, may help with mood but will certainly help with delivery.</description>
+    </item>
+    
+    <item>
+      <title>Quality and Pragmatism </title>
+      <link>http://example.org/posts/quality-and-pragmatism/</link>
+      <pubDate>Thu, 27 Sep 2018 17:10:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/quality-and-pragmatism/</guid>
+      <description>Pragmatism and quality are two things that are often pitted against each other when delivering software. When I think of pragmatism, I think what things can be avoided in order to deliver software to our customer sooner. When I think quality, I think a whole range of things including: maintainability, scalability, and interoperability of a system to name a few. It may also mean things that may not directly relate to the system for example: documentation, support, and user customisation.</description>
+    </item>
+    
+    <item>
+      <title>Reboot DevOps (Part: III)</title>
+      <link>http://example.org/posts/reboot-devops-part-iii/</link>
+      <pubDate>Tue, 14 Aug 2018 17:47:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops-part-iii/</guid>
+      <description>As alluded to in Part 1 and II it seems that DevOps has just become about CI/CD pipelines, provisioning infrastructure, and deploying applications. Today, we&amp;rsquo;ll speak about CI/CD pipelines but more specifically the purpose they seek to provide.
+Firstly, I think the term CI/CD is counter-intuitive. It&amp;rsquo;s not a descriptive term and I would prefer to use the far more boring term release pipeline because it is self descriptive. Our primary concern is how does candidate code get from a local developer&amp;rsquo;s machine all the way into production.</description>
+    </item>
+    
+    <item>
+      <title>Reboot DevOps (Part: II)</title>
+      <link>http://example.org/posts/reboot-devops-part-ii/</link>
+      <pubDate>Tue, 07 Aug 2018 13:52:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops-part-ii/</guid>
+      <description>In the Part I we discussed how DevOps isn&amp;rsquo;t about solving application problems using infrastructure but about being able to deploy to our targets in a sustainable way. We spoke about how increasing confidence enables personnel to release more often as risks are hedged by having solid application packages.
+
+Magnifying glass source: Wikimedia commons
+Today we will speak about how monitoring and observability can increase our confidence to enable us to release more often.</description>
+    </item>
+    
+    <item>
+      <title>Reboot DevOps</title>
+      <link>http://example.org/posts/reboot-devops/</link>
+      <pubDate>Tue, 24 Jul 2018 09:54:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops/</guid>
+      <description>In an ideal scenario a large organisation would have DevOps capabilities spread across their various teams. There would be no need to lean on an operations team to do any deployment, scaling, or observing of applications. Engineers would understand the inside and outside of infrastructure, security, logging, and message brokering.
+The world isn&amp;rsquo;t ideal though, that&amp;rsquo;s not an excuse not to strive for the ideal.
+
+Fixing problems in the wrong way.</description>
+    </item>
+    
+    <item>
+      <title>Standing in a Circle Clapping is Not Agile</title>
+      <link>http://example.org/posts/standing-in-circle-clapping-is-not-agile/</link>
+      <pubDate>Fri, 20 Jul 2018 16:11:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/standing-in-circle-clapping-is-not-agile/</guid>
+      <description>For many organisations going through an agile or digital transformation, there seems to be a culture of standing around clapping. When this behaviour is regular and habitual for every little achievement, I become sceptical of its value.
+Today, I would like to explain to you my scepticism.
+Firstly, I think that many organisations that are going through a transformation stand in a circle and clap because they hadn&amp;rsquo;t recognised achievements properly in the past.</description>
+    </item>
+    
+    <item>
+      <title>It depends</title>
+      <link>http://example.org/posts/it-depends/</link>
+      <pubDate>Mon, 02 Jul 2018 12:33:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/it-depends/</guid>
+      <description>A few months ago I wrote a post I Don’t Know. It was a post that explained why being honest about things you don’t know is important, as it builds trust amongst team members. I also explained why saying you don’t know something and following it up with a desire to actually take action, in order to gain that knowledge, is important. Today, I will talk about the words “it depends”.</description>
+    </item>
+    
+    <item>
+      <title>Stop Demonising Process</title>
+      <link>http://example.org/posts/stop-demonising-process/</link>
+      <pubDate>Tue, 19 Jun 2018 08:42:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/stop-demonising-process/</guid>
+      <description>All too often people appeal to being &amp;ldquo;Agile&amp;rdquo; as a way to avoid following or having process. It could be because the term &amp;ldquo;Agile&amp;rdquo; implies flexibility or even because the Agile Manifesto itself says explicitly that &amp;ldquo;Individuals and interactions over processes and tools&amp;rdquo;. Here, the manifesto doesn&amp;rsquo;t say that being &amp;ldquo;Agile&amp;rdquo; doesn&amp;rsquo;t mean you don&amp;rsquo;t have process, it simply says you favour individuals over process. The demonisation of process could also be a knee jerk reaction of when teams had process imposed on them.</description>
+    </item>
+    
+    <item>
+      <title>How rock climbing, cooking, and weight lifting help us relate to software delivery.</title>
+      <link>http://example.org/posts/how-rock-climbing-cooking-and-weight/</link>
+      <pubDate>Mon, 04 Jun 2018 22:15:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/how-rock-climbing-cooking-and-weight/</guid>
+      <description>Incremental, iterative, sprints. Whatever word you may use, the whole point is, as the agile manifesto says to Deliver working software frequently. The key here is working not necessarily perfect_. _Using the words just mentioned or even the word _agile_ can cause some confusion. One of the most common aspects of confusion for people not wanting to deliver incrementally and pushing a large amount of changes into a future release is Aren&amp;rsquo;t we agile, let&amp;rsquo;s be flexible.</description>
+    </item>
+    
+    <item>
+      <title>People or Resources? Let&#39;s Be Honest With Ourselves</title>
+      <link>http://example.org/posts/people-or-resources-lets-be-honest-with/</link>
+      <pubDate>Wed, 23 May 2018 21:11:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/people-or-resources-lets-be-honest-with/</guid>
+      <description>I&amp;rsquo;ve never liked it when people get referred to as resources. Especially when it&amp;rsquo;s thrown around in front of the people themselves. Chairs, tables, capital, and computing power. These are resources, not people.
+Nevertheless, a change of language is a good place to start.
+A danger exists in any organisation where people may be abstracted away from their leaders, in these scenarios, it&amp;rsquo;s easy to see people as resources or see people as a composition of their attributes be they: technology strengths, experience, height, weight and/or salary band.</description>
+    </item>
+    
+    <item>
+      <title>Scaling Agile with GRC (Governance, Risk, and Compliance)</title>
+      <link>http://example.org/posts/scaling-agile-with-grc-governance-risk/</link>
+      <pubDate>Thu, 10 May 2018 10:11:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/scaling-agile-with-grc-governance-risk/</guid>
+      <description>In the 21st Century, software is at the forefront of our lives. Our insurance, money, communication is all done via software. As such, the importance of GRC is becoming ever more apparent as more and more sensitive information is being stored and viewed by a range of people. We as software practitioners have the responsibility to ensure we store data securely, encrypt communication, output data in a legal and compliant format, and make everything accessible to the general public.</description>
+    </item>
+    
+    <item>
+      <title>Commerce, coffee, and value</title>
+      <link>http://example.org/posts/commerce-coffee-and-value/</link>
+      <pubDate>Mon, 16 Apr 2018 13:23:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/commerce-coffee-and-value/</guid>
+      <description>According to Wikipedia, commerce is the exchange of goods and services that existed as part of the human story since prehistoric times. Before currency we used to barter, then we began to use currency backed by resources like gold, and now we use fiat money (currency backed by the issuing government).
+As humans we&amp;rsquo;ve learnt that this is the way we exchange value. When I go to a particular coffee shop on a Saturday it&amp;rsquo;s because I judge that the value in the coffee given to me is better than the shop next door.</description>
+    </item>
+    
+    <item>
+      <title>Transformation, reorganisation, and continuous improvement</title>
+      <link>http://example.org/posts/transformation-reorganisation-and/</link>
+      <pubDate>Sat, 10 Mar 2018 16:08:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/transformation-reorganisation-and/</guid>
+      <description>It seems that almost everywhere I look, a big corporate is going through a &amp;lsquo;transformation&amp;rsquo; or &amp;lsquo;reorganisation&amp;rsquo;. Clearly someone within these organisation is making the decision that this is required because of problems occurring with existing software delivery practices. That is, they want something improved.
+Throughout 2016, I lost more than 20kgs of weight. I did this very slowly through dieting and returning back to my previous exercising habits. I&amp;rsquo;ve maintained this weight throughout 2017 and now.</description>
+    </item>
+    
+    <item>
+      <title>&#39;Hierarchy&#39; the dirty word</title>
+      <link>http://example.org/posts/hierarchy-dirty-word-comments/</link>
+      <pubDate>Wed, 21 Feb 2018 22:49:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/hierarchy-dirty-word-comments/</guid>
+      <description> Well said! To me hierarchy is about responsibility&amp;hellip; Emad Alashi - Feb 5, 2018
+Well said! To me hierarchy is about responsibility, what makes it dirty is the privilege, false prestige, and unbalanced benefits that is usually associated with it, wrongfully. Control that, and you get yourself a healthy hierarchy. </description>
+    </item>
+    
+    <item>
+      <title>&#39;Hierarchy&#39; the dirty word</title>
+      <link>http://example.org/posts/hierarchy-dirty-word/</link>
+      <pubDate>Wed, 21 Feb 2018 22:49:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/hierarchy-dirty-word/</guid>
+      <description>Modern human resource departments dread the word &amp;ldquo;hierarchy&amp;rdquo;, companies happily boast of their &amp;ldquo;flat structure&amp;rdquo; in job advertisements, and national leaders are disparaged as being out of touch. However, when is a bit of hierarchy actually good? When is it worth it?
+My personal issue isn&amp;rsquo;t with hierarchy. It&amp;rsquo;s with excess, unneeded hierarchy. Hierarchy can be good as it means the higher up the individual goes, the more responsibility they have.</description>
+    </item>
+    
+    <item>
+      <title>3, 2, 1 - REVEAL POINTS. The true value of poker sizing</title>
+      <link>http://example.org/posts/3-2-1-reveal-points-true-value-of-poker/</link>
+      <pubDate>Thu, 08 Feb 2018 09:00:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/3-2-1-reveal-points-true-value-of-poker/</guid>
+      <description>Many of us are in teams with a good habit of sizing work items, and in many cases this is a good habit. However, do we truly understand the importance of this behaviour? Why do we do it? Is it even necessary, and where is the real value of all this?
+
+A Royal Flush, the highest possible hand in poker: Source Wikimedia Commons
+Points poker sizing is very common. The team calculate velocity and use this velocity to forecast their work for their next work iteration.</description>
+    </item>
+    
+    <item>
+      <title>I Don&#39;t Know</title>
+      <link>http://example.org/posts/i-dont-know/</link>
+      <pubDate>Tue, 02 Jan 2018 17:05:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/i-dont-know/</guid>
+      <description>Many people who come from command and control working environments have a very limited circle of safety. This maybe because their suggestions have been discarded rudely, being treated poorly, or always fearing for their job. They do not suggest improvements and are often too scared to ask for help.
+
+source: Wiki Commons
+[](https://www.blogger.com/null)When working in environments like this that are trying to change for the better. One of the things we can do is say &amp;ldquo;I don&amp;rsquo;t know&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>Why unit testing is still very relevant</title>
+      <link>http://example.org/posts/why-unit-testing-is-still-very-relevant/</link>
+      <pubDate>Sat, 23 Dec 2017 12:01:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/why-unit-testing-is-still-very-relevant/</guid>
+      <description>In this age of in-memory test servers and databases, multi tenancy-first design, and increased performance it&amp;rsquo;s easy to simply dismiss unit testing as a practice of the past. Whilst I myself have increased my dependance on integration testing in new applications that I write. Unit testing still has its place.
+
+ A set of beer-units about to be tested | source: WikiMedia Commons *   [](https://www.blogger.com/null)
+In 2017, I&amp;rsquo;ve gave a few talks about testing more and mocking less.</description>
+    </item>
+    
+    <item>
+      <title>from zero to production in eighty days</title>
+      <link>http://example.org/posts/from-zero-to-production-in-eighty-days/</link>
+      <pubDate>Sat, 04 Nov 2017 17:39:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/from-zero-to-production-in-eighty-days/</guid>
+      <description>When I mean zero, I literally mean zero. A brand new project, a PO that&amp;rsquo;s new to IT, no existing processes in place and a small team of four including myself and the PO.
+The departmental organisation we were working for doesn&amp;rsquo;t have any developers, scrum masters, product owners working for them. Everything they did was either done by another department or outsourced completely.
+This is a story how we went from zero to production in eighty days.</description>
+    </item>
+    
+    <item>
+      <title>Context and agile practices</title>
+      <link>http://example.org/posts/context-and-agile-practices/</link>
+      <pubDate>Fri, 15 Sep 2017 08:36:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/context-and-agile-practices/</guid>
+      <description>At times we have competing responsibilities - ship code or don&amp;rsquo;t ship it because of a small edge case bug; put pressure on our team or make the business happy; coach our friends or write code.
+This is a normal part of our everyday professional lives, and it&amp;rsquo;s important to strike a balance that will help us in the future, but also deliver in the short-term.
+One of the hardest things to balance is when to modify our delivery practices to satisfy certain team members, when we know the changes have been harmful in past projects.</description>
+    </item>
+    
+    <item>
+      <title>leadership, maturity and authority</title>
+      <link>http://example.org/posts/leadership-maturity-and-authority/</link>
+      <pubDate>Mon, 10 Apr 2017 10:40:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/leadership-maturity-and-authority/</guid>
+      <description>A recent question was asked in Readify&amp;rsquo;s internal Yammer along the lines of how technically strong does a team leader need to be to lead a technical team.
+The conversation eventually diverted into a range of exclamations by very smart Readifarians on what leadership is in different scenarios.
+Below is my opinion
+To me, a leader in general is optimised by his/her ability to serve others. A servant-leader is essentially one who is able to jump into the heat of battle first and leave last, ensure that his/her family eats and are satisfied before eating or simply ensuring every other team member is able to work on the task at-hand prior to starting their own task.</description>
+    </item>
+    
+    <item>
+      <title>WHY the same place and time for your daily stand-up?</title>
+      <link>http://example.org/posts/why-same-place-and-time-for-your-daily/</link>
+      <pubDate>Mon, 18 Jul 2016 20:20:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/why-same-place-and-time-for-your-daily/</guid>
+      <description>&amp;ldquo;we&amp;rsquo;re all here, let&amp;rsquo;s just have stand-up now&amp;rdquo;
+&amp;ldquo;so-and-so isn&amp;rsquo;t coming today, so let&amp;rsquo;s have stand-up now&amp;rdquo;
+&amp;ldquo;hey, I&amp;rsquo;ll just come over there and we&amp;rsquo;ll do stand-up there&amp;rdquo;
+It seems so easy and innocent to simply change the time and place of stand-ups, especially when key people such as the PO or Scrum master may not be attending the meeting for the day. The reasons I recommend for not changing are:</description>
+    </item>
+    
+    <item>
+      <title>The &#34;planning &lt;--&gt; implementation&#34; balance</title>
+      <link>http://example.org/posts/the-planning-implementation-balance/</link>
+      <pubDate>Fri, 20 Nov 2015 10:27:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/the-planning-implementation-balance/</guid>
+      <description>One of the great things about Agile is the ability to manage the expectations of stakeholders quite early in the development cycle. Likewise, from a business perspective: one of the great things about Agile is the ability to change requirements late in the development cycle.
+When putting together an initial product backlog with estimates and detail. A certain amount of planning is done (whether this software product be a green field project or a slice in an existing project).</description>
+    </item>
+    
+    <item>
+      <title>Disaster (security or otherwise) in an agile (scrum) environment</title>
+      <link>http://example.org/posts/disaster-security-or-otherwise-in-agile/</link>
+      <pubDate>Mon, 31 Aug 2015 14:49:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/disaster-security-or-otherwise-in-agile/</guid>
+      <description>When a disaster occurs in a system. Be that security, data or accidental the first thing that occurs in the psyche of the whole scrum team is:
+Something, unusual has happened. Something different has happened. What do we do? What are the next steps.
+The very definition of disaster in the Macquarie Dictionary alludes to this.
+disaster
+ Pronunciation of disaster /dəˈzastə/ (say duh&amp;rsquo;zahstuh)
+noun 1. any unfortunate event, especially a sudden or great misfortune.</description>
+    </item>
+    
+    <item>
+      <title>Delete/Redeploy Azure Websites at specific times within a TeamCity and Octopus Deploy CI/CD pipeline</title>
+      <link>http://example.org/posts/deleteredeploy-azure-websites-at-comments/</link>
+      <pubDate>Fri, 29 May 2015 09:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/deleteredeploy-azure-websites-at-comments/</guid>
+      <description>Thanks for sharing, nice post! Casanova là Ji Yeon - Jan 5, 2016
+Thanks for sharing, nice post!
+Casanova là quán cafe tphcm được thiết kế hoàn toàn theo phong cách độc đáo của nước Ý, đây là quán quán cà phê cổ ở sài gòn không gian cổ điển đẹp hay cách thưởng thức cafe capuchino hay cafe dep o sai gon với không gian tuyệt đẹp hay bạn có biết loi ich ca phe đối với sức khỏe chưa quán cà phê làm việc lý tưởng của freelancer hay quán cafe chụp ảnh đẹp hay đây là cafe con hẻm nhỏ hay đây là quán cafe học nhóm tphcm cực hợp có phòng riêng hay quán cafe tình nhân ở sài gòn hay đây là 1 trong quán cafe lãng mạn sài gòn với đồ uống giá rẻ hay là điểm hẹn cà phê cuối tuần với Casanova Cafe hay meo giup be ngu ngon giúp bé ngủ ngon giấc hay nôi võng giúp bé ngủ ngon.</description>
+    </item>
+    
+    <item>
+      <title>Delete/Redeploy Azure Websites at specific times within a TeamCity and Octopus Deploy CI/CD pipeline</title>
+      <link>http://example.org/posts/deleteredeploy-azure-websites-at/</link>
+      <pubDate>Fri, 29 May 2015 09:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/deleteredeploy-azure-websites-at/</guid>
+      <description>Problem Many clients request that specific environments be only available certain times during a day.
+This is often due to the high cost associated with keeping environments that are not in use.
+The problem here can be divided into two.
+1. How do we make the environment unavailable?
+2. How do we make the environment available once more?
+Microsoft will charge Azure services per compute time. Meaning that even if you stop your Azure Website it will still incur costs.</description>
+    </item>
+    
+  </channel>
+</rss>

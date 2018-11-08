@@ -1,0 +1,147 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Reboot DevOps (Part: III)</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-08-14T17:47:00&#43;10:00">Aug 14, 2018</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/team-work/">#team work</a>
+                
+                    , 
+                    <a href="/tags/devops/">#devops</a>
+                
+                    , 
+                    <a href="/tags/agile/">#agile</a>
+                
+            </em>
+        </li>
+        
+
+        <li>3 min read</li>
+    </ul>
+</aside>
+    
+
+    <p>As alluded to in Part 1 and II it seems that DevOps has just become about CI/CD pipelines, provisioning infrastructure, and deploying applications. Today, we&rsquo;ll speak about CI/CD pipelines but more specifically the purpose they seek to provide.</p>
+
+<p>Firstly, I think the term CI/CD is counter-intuitive. It&rsquo;s not a descriptive term and I would prefer to use the far more boring term <em>release pipeline</em> because it is self descriptive. Our primary concern is how does candidate code get from a local developer&rsquo;s machine all the way into production. Here we need to employ ToC (Theory of Constraints) thinking to really understand the reasoning of CI/CD in the first place.</p>
+
+<blockquote>
+<p>the level of utilization of a non-bottleneck is not determined by its own potential, but by some other constraint in the system. - Dr Eli Goldratt</p>
+</blockquote>
+
+<p>Within a software releasing paradigm the above suggests that there is little reason to optimise a step in your flow that&rsquo;s not the bottleneck. This can be anywhere from code reviewing, compiling and building, QA, legal, and deployment.</p>
+
+<p>Similarly, there&rsquo;s no point of optimising CI/CD if that part of your flow isn&rsquo;t the bottleneck. CI/CD in isolation isn&rsquo;t the finish line. It is simply a means towards getting to the finish line. Which is, to continue to make the delivery of software into production as smooth and sustainable as possible. This is a goal that&rsquo;s ever-receding. There&rsquo;s always room for improvement.</p>
+
+<p>Ask yourself the below questions.</p>
+
+<ul>
+<li>Does your package get stuck at a lower environment waiting QA before it gets deployed to production?</li>
+<li>Does candidate code remain in long lived branches?</li>
+<li>Does building your package take a long time?</li>
+<li>Are there bugs that appear in some environments but not in production?</li>
+</ul>
+
+<p>If you answered &lsquo;Yes&rsquo; to any of the above. Then CI/CD will not be addressing the bottleneck. If we&rsquo;re not addressing the bottleneck then our primary concern of getting candidate code into production isn&rsquo;t getting the attention it needs. You&rsquo;re solving the wrong problem.</p>
+
+<p>If we&rsquo;re focusing on CI/CD only, a local efficiency, then we&rsquo;re not focusing on our entire flow. DevOps shouldn&rsquo;t be about CI/CD in isolation. DevOps should be about the bottlenecks that exist in releasing software. Several years ago, this may have meant the bottleneck exists at the infrastructure level. Today, it may be different things such as: security, QA, and poor branching strategies.</p>
+
+<p>DevOps is commonly seen as a joining of two sub-teams of a wider technical team (development and operations). The reason for this &lsquo;joining&rsquo; is what we should take into our contemporary software industry not necessarily the act of it. That original reason was the involvement of several capabilities in order to release software as a single common team. Today, software is a lot more complicated and more people may be involved. These people include: security, legal, QA, development, and infrastructure.</p>
+
+<p>Building these capabilities across our teams is what will help us deliver software quicker. This may mean cross discipline engagement. Developers must speak to security, operations must speak to legal. The combinations are innumerable. It also means that we as technical people have to change our isolated way of working. We have to be patient and focus less on local efficiencies and more on common metrics that encompass the entire release life cycle. We need to engage all relevant teams and individuals to identify and utilise the bottlenecks in order to establish a sustainable release cadence.</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/reboot-devops-part-ii/"><i class="fa fa-chevron-circle-left"></i> Reboot DevOps (Part: II)</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/do-you-know-what-i-mean/">Do you know what I mean? <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

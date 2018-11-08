@@ -1,0 +1,213 @@
+<!doctype html>
+
+<html lang="en-us">
+
+<head>
+  <title>Raph&#39;s Blog</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="The HTML5 Herald" />
+  <meta name="author" content="" />
+  <meta name="generator" content="Hugo 0.49" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Slab|Ruda" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+</head>
+
+<body>
+  <div id="container">
+    <header>
+      <h1>
+                <a href="/">Raph&rsquo;s Blog</a>
+            </h1>
+
+      <ul id="social-media">
+             
+      </ul>
+      
+    </header>
+
+    
+<nav>
+    <ul>
+        
+        <li>
+            <a class="" href="/posts/">
+                <i class="fa-li fa  fa-lg"></i><span>Archive</span>
+            </a>
+        </li>
+        
+    </ul>
+</nav>
+
+    <main>
+
+
+
+
+<article>
+
+    <h1>Build and Release Pipeline for Your Own Custom VSTS Tasks</h1>
+
+    
+        <aside>
+    <ul>
+        <li>
+            <time class="post-date" datetime="2018-03-27T16:14:00&#43;11:00">Mar 27, 2018</time>
+        </li>
+        
+        
+
+        
+        <li>
+            <em>
+                
+                    
+                    <a href="/tags/vsts/">#vsts</a>
+                
+                    , 
+                    <a href="/tags/devops/">#devops</a>
+                
+            </em>
+        </li>
+        
+
+        <li>3 min read</li>
+    </ul>
+</aside>
+    
+
+    
+
+<p>Anyone can create their own custom VSTS tasks and put them on the VSTS <a href="https://marketplace.visualstudio.com/">marketplace</a>. There are tons of these custom tasks and they can be published publicly into the marketplace or privately into your own instance of VSTS. This blog post will demonstrate how to setup a build and release pipeline for these custom tasks (using custom VSTS tasks!).</p>
+
+<p>There are many reasons to create your own tasks on an instance of VSTS. You could be part of a DevOps capability that wants to share common platforms, standardisation, or integrations. Generally though the reasoning is to avoid common steps that are duplicated across different build and release pipelines.</p>
+
+<h3 id="prerequisites-and-gotchas">Prerequisites and gotchas</h3>
+
+<p>Before actually setting up your own pipeline for custom tasks. You&rsquo;ll need to be able to create them locally first. I find the best tool for this is the tfx-cli that can be found <a href="https://github.com/Microsoft/tfs-cli">here</a>. It scaffolds your task folder structure and provides a mechanism to publish into VSTS. My personal preference is to write my custom tasks with PowerShell and as such I need to include the <a href="https://github.com/Microsoft/vsts-task-lib">VstsTaskSdk</a> in my source. The following structure is the result:</p>
+
+<p>icon.png                           </p>
+
+<p>sample.ps1                            </p>
+
+<p>task.json                          </p>
+
+<p>ps_modules                         </p>
+
+<p>└───VstsTaskSdk                           </p>
+
+<p>    │                              </p>
+
+<p>    └───Strings                    </p>
+
+<p>        └───resources.resjson      </p>
+
+<h3 id="setting-up-the-pipeline">Setting up the pipeline</h3>
+
+<h4 id="install-dependencies">Install Dependencies</h4>
+
+<p>The first thing we need to do is install tfx-cli as a local dependency if we haven&rsquo;t already done so:</p>
+
+<p>npm init<br />
+npm install tfx-cli</p>
+
+<h4 id="generate-pat">Generate PAT</h4>
+
+<p>After you&rsquo;ve done this, you&rsquo;ll need to generate a<a href="https://docs.microsoft.com/en-us/vsts/accounts/use-personal-access-tokens-to-authenticate#create-personal-access-tokens-to-authenticate-access"> personal access token</a> from your account. To be extra secure only give this token access to the scopeMarketplace (publish) (if you want to push into the VSTS marketplace) and/or Agent Pools (read, manage) (if you want to push into your own VSTS instance).</p>
+
+<p><a href="https://1.bp.blogspot.com/-Mm19_VuVObA/Wrmbh2n7j3I/AAAAAAAARHg/HhG5HDPyX8UKofeo5exJA_MFm0iLAvkLQCLcBGAs/s1600/pat.jpg"><img src="https://1.bp.blogspot.com/-Mm19_VuVObA/Wrmbh2n7j3I/AAAAAAAARHg/HhG5HDPyX8UKofeo5exJA_MFm0iLAvkLQCLcBGAs/s400/pat.jpg" alt="" /></a></p>
+
+<p>Take note of this Personal Access Token as we&rsquo;ll need it in a bit.</p>
+
+<h4 id="create-the-build-definition">Create the Build Definition</h4>
+
+<p>Go to your instance of VSTS. Create an empty build definition, select your source location, and save the definition:</p>
+
+<p><a href="https://3.bp.blogspot.com/-9c59Mxm4Wh8/WrXu9NSKdDI/AAAAAAAARGE/8XZBOSJYimA571-rZpQwbUTySpddiu32wCLcBGAs/s1600/source.jpg"><img src="https://3.bp.blogspot.com/-9c59Mxm4Wh8/WrXu9NSKdDI/AAAAAAAARGE/8XZBOSJYimA571-rZpQwbUTySpddiu32wCLcBGAs/s640/source.jpg" alt="" /></a></p>
+
+<p>After you&rsquo;ve done this, you&rsquo;ll need to add a custom variable to your definition. Add your pat (which you created previously) as a secret variable:</p>
+
+<p><a href="https://2.bp.blogspot.com/-Cift6q-4FRU/WrmcgX0QgRI/AAAAAAAARHs/PoT3gJvqbRcRkp1ak2i2ZRJqqB_oxcroACLcBGAs/s1600/add_variable.jpg"><img src="https://2.bp.blogspot.com/-Cift6q-4FRU/WrmcgX0QgRI/AAAAAAAARHs/PoT3gJvqbRcRkp1ak2i2ZRJqqB_oxcroACLcBGAs/s640/add_variable.jpg" alt="" /></a></p>
+
+<p>Security Warning:<br />
+As you&rsquo;ll be adding your PAT to this definition, anyone with permission to modify this build definition will be able to execute commands with the permissions that this PAT has on your behalf. </p>
+
+<p>Make sure that the Build number format in the options tab is empty:</p>
+
+<p><a href="https://1.bp.blogspot.com/-LTQHu-sXDh4/Wrmd5e-2bKI/AAAAAAAARH4/r7Ypfnz3yTM0JwgqXDBoFg-DbPbkMQ14wCLcBGAs/s1600/empty_build_number.jpg"><img src="https://1.bp.blogspot.com/-LTQHu-sXDh4/Wrmd5e-2bKI/AAAAAAAARH4/r7Ypfnz3yTM0JwgqXDBoFg-DbPbkMQ14wCLcBGAs/s400/empty_build_number.jpg" alt="" /></a></p>
+
+<h4 id="add-build-number-tokens">Add Build Number Tokens</h4>
+
+<p>In the code for your Custom Task. Open up your task.json file. In version:Patch replace the number with #{BUILD_BUILDNUMBER}# This token will eventually be replaced in the pipeline with the VSTS build number.</p>
+
+<p><a href="https://2.bp.blogspot.com/-Y8DGudIgC-k/WrmidAj5V5I/AAAAAAAARIE/SqtRxesHlW4ACw11zdXxQ_um36iPWtZ4wCLcBGAs/s1600/token.jpg"><img src="https://2.bp.blogspot.com/-Y8DGudIgC-k/WrmidAj5V5I/AAAAAAAARIE/SqtRxesHlW4ACw11zdXxQ_um36iPWtZ4wCLcBGAs/s320/token.jpg" alt="" /></a></p>
+
+<h4 id="add-steps-in-build-definition">Add steps in Build Definition</h4>
+
+<p>You will need three steps in the build definition<br />
+<em>1. Install TFX on the build agent</em><br />
+Add a npm task with the command install</p>
+
+<p><a href="https://1.bp.blogspot.com/-lNUcafIlJmI/WrmkHEDZVlI/AAAAAAAARIQ/5ZwZF1zGlM0PBYU4Xpc-wpQSJl2hye-IACLcBGAs/s1600/task_npm.jpg"><img src="https://1.bp.blogspot.com/-lNUcafIlJmI/WrmkHEDZVlI/AAAAAAAARIQ/5ZwZF1zGlM0PBYU4Xpc-wpQSJl2hye-IACLcBGAs/s640/task_npm.jpg" alt="" /></a></p>
+
+<p><em>2. Replace tokens from task.json with the build number</em><br />
+Add a <a href="https://github.com/qetza/vsts-replacetokens-task#readme">Replace Tokens Task</a> that will automatically replace the build number from VSTS pre-defined environment variables. I like to explicitly define the files where the tokens exist. In our case: task.json</p>
+
+<p><a href="https://2.bp.blogspot.com/-efOW92Ape8c/WrmkvP_1RMI/AAAAAAAARIY/7LNDEtnx8uUa2UBsHtfVNseaiCV3VTa8QCLcBGAs/s1600/task_replace_tokens.jpg"><img src="https://2.bp.blogspot.com/-efOW92Ape8c/WrmkvP_1RMI/AAAAAAAARIY/7LNDEtnx8uUa2UBsHtfVNseaiCV3VTa8QCLcBGAs/s640/task_replace_tokens.jpg" alt="" /></a></p>
+
+<p><em>3. Push the Task to VSTS</em></p>
+
+<p>Create a command line Task with node as the tool and the following arguments:</p>
+
+<p>.\node_modules\tfx-cli\ build tasks upload &ndash;task-path ./ &ndash;service-url https://{YOUR_INSTANCE}.visualstudio.com/DefaultCollection &ndash;token $(pat)</p>
+
+<p><a href="https://4.bp.blogspot.com/-Z7ebyC4JQ4Y/Wrna9cGpmII/AAAAAAAARIw/pRuAYHQfRyIJ3MRr8bs7fcaGJuJ-4eU2gCLcBGAs/s1600/push.jpg"><img src="https://4.bp.blogspot.com/-Z7ebyC4JQ4Y/Wrna9cGpmII/AAAAAAAARIw/pRuAYHQfRyIJ3MRr8bs7fcaGJuJ-4eU2gCLcBGAs/s640/push.jpg" alt="" /></a></p>
+
+<h3 id="conclusion">Conclusion</h3>
+
+<p>The above is a very simple example on how we can create a pipeline for our custom tasks. However, there are various things that can be done to minimise chances of error and noise. These things include:</p>
+
+<ul>
+<li>Creating separate pipelines for build (npm install and update build number) and release (Push)</li>
+<li>As part of building including the PowerShell Task SDK.</li>
+</ul>
+
+<p>The above improvements and others can be made depending on your specific team organisation and preferences. I&rsquo;ll leave that up to you! Thanks for reading.</p>
+
+
+</article>
+
+
+<section class="post-nav">
+    <ul>
+        
+        <li>
+            <a href="http://example.org/posts/using-sbar-in-code-reviews/"><i class="fa fa-chevron-circle-left"></i> Using SBAR in code reviews</a>
+        </li>
+        
+        
+        <li>
+            <a href="http://example.org/posts/build-and-release-pipeline-for-your-own-comments/">Build and Release Pipeline for Your Own Custom VSTS Tasks <i class="fa fa-chevron-circle-right"></i> </a>
+        </li>
+        
+    </ul>
+</section>
+    
+
+
+
+
+
+</main>
+    <footer>
+        <h6> | 
+            Rendered by <a href="https://gohugo.io" title="Hugo">Hugo</a> |
+            <a href="http://example.org/index.xml">Subscribe</a></h6>
+    </footer>
+</div>
+<script src="/js/scripts.js"></script>
+</body>
+
+</html>

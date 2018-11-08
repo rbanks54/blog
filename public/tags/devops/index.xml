@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Devops on Raph&#39;s Blog</title>
+    <link>http://example.org/tags/devops/</link>
+    <description>Recent content in Devops on Raph&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 14 Aug 2018 17:47:00 +1000</lastBuildDate>
+    
+	<atom:link href="http://example.org/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Reboot DevOps (Part: III)</title>
+      <link>http://example.org/posts/reboot-devops-part-iii/</link>
+      <pubDate>Tue, 14 Aug 2018 17:47:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops-part-iii/</guid>
+      <description>As alluded to in Part 1 and II it seems that DevOps has just become about CI/CD pipelines, provisioning infrastructure, and deploying applications. Today, we&amp;rsquo;ll speak about CI/CD pipelines but more specifically the purpose they seek to provide.
+Firstly, I think the term CI/CD is counter-intuitive. It&amp;rsquo;s not a descriptive term and I would prefer to use the far more boring term release pipeline because it is self descriptive. Our primary concern is how does candidate code get from a local developer&amp;rsquo;s machine all the way into production.</description>
+    </item>
+    
+    <item>
+      <title>Reboot DevOps (Part: II)</title>
+      <link>http://example.org/posts/reboot-devops-part-ii/</link>
+      <pubDate>Tue, 07 Aug 2018 13:52:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops-part-ii/</guid>
+      <description>In the Part I we discussed how DevOps isn&amp;rsquo;t about solving application problems using infrastructure but about being able to deploy to our targets in a sustainable way. We spoke about how increasing confidence enables personnel to release more often as risks are hedged by having solid application packages.
+
+Magnifying glass source: Wikimedia commons
+Today we will speak about how monitoring and observability can increase our confidence to enable us to release more often.</description>
+    </item>
+    
+    <item>
+      <title>Reboot DevOps</title>
+      <link>http://example.org/posts/reboot-devops/</link>
+      <pubDate>Tue, 24 Jul 2018 09:54:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/reboot-devops/</guid>
+      <description>In an ideal scenario a large organisation would have DevOps capabilities spread across their various teams. There would be no need to lean on an operations team to do any deployment, scaling, or observing of applications. Engineers would understand the inside and outside of infrastructure, security, logging, and message brokering.
+The world isn&amp;rsquo;t ideal though, that&amp;rsquo;s not an excuse not to strive for the ideal.
+
+Fixing problems in the wrong way.</description>
+    </item>
+    
+    <item>
+      <title>Tips to Automate Yourself Out of a Job</title>
+      <link>http://example.org/posts/tips-to-automate-yourself-out-of-job/</link>
+      <pubDate>Thu, 05 Apr 2018 07:33:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/tips-to-automate-yourself-out-of-job/</guid>
+      <description>Providing tools, processes, and platforms that automate everything, including yourself out of a job should be the goal of everyone in IT. It&amp;rsquo;s something people rant about on Twitter, speak about on YouTube, and attempt to inspire on LinkedIn. Everyone seems to be telling us we _should_ automate our jobs, not many are telling us how. Today I have a few practical things you can do to actualise this goal.</description>
+    </item>
+    
+    <item>
+      <title>Build and Release Pipeline for Your Own Custom VSTS Tasks</title>
+      <link>http://example.org/posts/build-and-release-pipeline-for-your-own-comments/</link>
+      <pubDate>Tue, 27 Mar 2018 16:14:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/build-and-release-pipeline-for-your-own-comments/</guid>
+      <description>Best post Michele H. Elam - Oct 1, 2018
+Best post Once in a while, the Hosted Agents won&amp;rsquo;t have &amp;hellip; Maria R. Brown - Oct 1, 2018
+Once in a while, the Hosted Agents won&amp;rsquo;t have the product you need, or you may need an especially husky form have. VSTS additionally gives you a chance to bring your own operator, where you can do whatever you need. This is awesome, however now you have to look after (read: pay for) a VM that is prepared to acknowledge employments.</description>
+    </item>
+    
+    <item>
+      <title>Build and Release Pipeline for Your Own Custom VSTS Tasks</title>
+      <link>http://example.org/posts/build-and-release-pipeline-for-your-own/</link>
+      <pubDate>Tue, 27 Mar 2018 16:14:00 +1100</pubDate>
+      
+      <guid>http://example.org/posts/build-and-release-pipeline-for-your-own/</guid>
+      <description>Anyone can create their own custom VSTS tasks and put them on the VSTS marketplace. There are tons of these custom tasks and they can be published publicly into the marketplace or privately into your own instance of VSTS. This blog post will demonstrate how to setup a build and release pipeline for these custom tasks (using custom VSTS tasks!).
+There are many reasons to create your own tasks on an instance of VSTS.</description>
+    </item>
+    
+    <item>
+      <title>More than just a build/release pipeline</title>
+      <link>http://example.org/posts/more-than-just-buildrelease-pipeline/</link>
+      <pubDate>Fri, 19 Aug 2016 16:42:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/more-than-just-buildrelease-pipeline/</guid>
+      <description>You&amp;rsquo;ve setup your build server, have continuous integration/delivery. Setup your release service, have continuous deployment. Your team are following proper branching strategy. Good yeah?
+However&amp;hellip;
+Code PRs are carelessly merged, builds are always broken and you&amp;rsquo;re 3 sprints behind.
+What&amp;rsquo;s the problem?
+An initial examination will show that your team are following all the rules. However, further examination will show that they aren&amp;rsquo;t being professional in other things. Many leads will simply suggest adding more rules.</description>
+    </item>
+    
+    <item>
+      <title>On premise CI/CD/CD with VSTFS2015 and IIS</title>
+      <link>http://example.org/posts/on-premise-cicdcd-with-vstfs2015-and-iis/</link>
+      <pubDate>Mon, 01 Aug 2016 17:30:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/on-premise-cicdcd-with-vstfs2015-and-iis/</guid>
+      <description>Many clients I visit are still not on the cloud and are still not using VSTS (Visual Studio Team Services) online and Azure.
+Meaning, they still have on premise infrastructure for their applications. Now, I don&amp;rsquo;t want this blog post to turn into a defence of cloud (more specifically PaaS). Rather, I want to quickly show you how you can setup a CI/CD/CD (Continuous Integration/Delivery/Deployment) delivery pipeline with an on-premise instance of VSTFS 2015 deploying to machines with IIS .</description>
+    </item>
+    
+    <item>
+      <title>Delete/Redeploy Azure Websites at specific times within a TeamCity and Octopus Deploy CI/CD pipeline</title>
+      <link>http://example.org/posts/deleteredeploy-azure-websites-at-comments/</link>
+      <pubDate>Fri, 29 May 2015 09:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/deleteredeploy-azure-websites-at-comments/</guid>
+      <description>Thanks for sharing, nice post! Casanova là Ji Yeon - Jan 5, 2016
+Thanks for sharing, nice post!
+Casanova là quán cafe tphcm được thiết kế hoàn toàn theo phong cách độc đáo của nước Ý, đây là quán quán cà phê cổ ở sài gòn không gian cổ điển đẹp hay cách thưởng thức cafe capuchino hay cafe dep o sai gon với không gian tuyệt đẹp hay bạn có biết loi ich ca phe đối với sức khỏe chưa quán cà phê làm việc lý tưởng của freelancer hay quán cafe chụp ảnh đẹp hay đây là cafe con hẻm nhỏ hay đây là quán cafe học nhóm tphcm cực hợp có phòng riêng hay quán cafe tình nhân ở sài gòn hay đây là 1 trong quán cafe lãng mạn sài gòn với đồ uống giá rẻ hay là điểm hẹn cà phê cuối tuần với Casanova Cafe hay meo giup be ngu ngon giúp bé ngủ ngon giấc hay nôi võng giúp bé ngủ ngon.</description>
+    </item>
+    
+    <item>
+      <title>Delete/Redeploy Azure Websites at specific times within a TeamCity and Octopus Deploy CI/CD pipeline</title>
+      <link>http://example.org/posts/deleteredeploy-azure-websites-at/</link>
+      <pubDate>Fri, 29 May 2015 09:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/deleteredeploy-azure-websites-at/</guid>
+      <description>Problem Many clients request that specific environments be only available certain times during a day.
+This is often due to the high cost associated with keeping environments that are not in use.
+The problem here can be divided into two.
+1. How do we make the environment unavailable?
+2. How do we make the environment available once more?
+Microsoft will charge Azure services per compute time. Meaning that even if you stop your Azure Website it will still incur costs.</description>
+    </item>
+    
+    <item>
+      <title>Create certificate for use with Azure PowerShell cmdlets</title>
+      <link>http://example.org/posts/create-certificate-for-use-with-azure-comments/</link>
+      <pubDate>Fri, 17 Apr 2015 14:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/create-certificate-for-use-with-azure-comments/</guid>
+      <description> The location of makecert for Visual Studio 2013: C&amp;hellip; Rajeev Joseph - Jul 1, 2015
+The location of makecert for Visual Studio 2013: C:\Program Files (x86)\Windows Kits\8.1\bin\x64 oh b.t.w. thanks Raph.. helped me out big time :) Rajeev Joseph - Jul 1, 2015
+oh b.t.w. thanks Raph.. helped me out big time :) Thanks Raph! Ahmed IG - Jan 1, 2016
+Thanks Raph! </description>
+    </item>
+    
+    <item>
+      <title>Create certificate for use with Azure PowerShell cmdlets</title>
+      <link>http://example.org/posts/create-certificate-for-use-with-azure/</link>
+      <pubDate>Fri, 17 Apr 2015 14:53:00 +1000</pubDate>
+      
+      <guid>http://example.org/posts/create-certificate-for-use-with-azure/</guid>
+      <description>There are two ways to access your Azure subscription from PowerShell(PS). The first is to use Add-AzureAccount and subsequently be greeted with a login. The other way is to use Set-AzureSubscription and use certificates.
+Below is the method of using certificates for more fluid scripts.
+ Open visual studio command prompt as an administrator. This is located under your Visual Studio family of applications. 
+ run this command (replacing  with a name)</description>
+    </item>
+    
+  </channel>
+</rss>
