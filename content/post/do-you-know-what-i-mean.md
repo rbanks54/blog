@@ -7,8 +7,9 @@ tags : [reflection, language]
 
 I've written previously about some language that I'm actively trying to change in my day-to-day dealings with people, I write these blog posts because they hold me public accountable to my peers, friends, and family. My previous posts were:
 
-[It Depends](https://blog.raph.ws/2018/07/it-depends.html)
-[I Don't Know](https://blog.raph.ws/2018/01/i-dont-know.html)
+[It Depends](/2018/07/it-depends)
+
+[I Don't Know](/2018/01/i-dont-know)
 
 
 [![](https://2.bp.blogspot.com/-CZ1uIVrN8gg/W4yvhXgoRPI/AAAAAAAAT6s/9k11-nlSkUYm1TgHKp65cAb8c_qrJs8IgCLcBGAs/s200/2018-09-03%2B13_50_03-https___upload.wikimedia.org_wikipedia_commons_a_a8_247-man-shrugging-2.svg.png)](https://2.bp.blogspot.com/-CZ1uIVrN8gg/W4yvhXgoRPI/AAAAAAAAT6s/9k11-nlSkUYm1TgHKp65cAb8c_qrJs8IgCLcBGAs/s1600/2018-09-03%2B13_50_03-https___upload.wikimedia.org_wikipedia_commons_a_a8_247-man-shrugging-2.svg.png)

@@ -5,12 +5,11 @@ draft: false
 tags : [team work, consulting, agile]
 ---
 
-A few months ago I wrote a post [I Don’t Know](https://blog.raph.ws/2018/01/i-dont-know.html). It was a post that explained why being honest about things you don’t know is important, as it builds trust amongst team members. I also explained why saying you don’t know something and following it up with a desire to actually take action, in order to gain that knowledge, is important. Today, I will talk about the words “it depends”.
+A few months ago I wrote a post [I Don’t Know](/2018/01/i-dont-know). It was a post that explained why being honest about things you don’t know is important, as it builds trust amongst team members. I also explained why saying you don’t know something and following it up with a desire to actually take action, in order to gain that knowledge, is important. Today, I will talk about the words “it depends”.
 
 ![](https://upload.wikimedia.org/wikipedia/commons/7/79/Recurrent_ann_dependency_graph.png)
 
 *Dependency Diagram for a recurrent artificial neural network. Source: Wikimedia Commons*
-
 
 Consultants are accused of overusing this phrase and rightly so. You see, if someone is asked a question and the response is “it depends”. Neither is the question answered nor is the information necessary to answer the question supplied, or a request for more information communicated.  
 
@@ -34,4 +33,4 @@ Answer: “What is the consequence of downtime? From my understanding we are a p
 
 The above examples try to provide direction from the request of consultation. In many cases though, it is up to the person who's consulted me to eventually make the decision. I can only give my opinion, the facts as I see them, and seek clarifications on dependencies.
 
-If someone has asked me a question it means they value my opinion. For me to simply respond back with “it depends” without actually providing clarification on those dependencies would not actually achieve anything. It’s OK to not be able to answer a question straight away and ask for further clarification, it's even OK to say [you don't know](https://blog.raph.ws/2018/01/i-dont-know.html)!  Either way, not leaving the question hanging is the key to actually getting it answered.
+If someone has asked me a question it means they value my opinion. For me to simply respond back with “it depends” without actually providing clarification on those dependencies would not actually achieve anything. It’s OK to not be able to answer a question straight away and ask for further clarification, it's even OK to say [you don't know](/2018/01/i-dont-know)!  Either way, not leaving the question hanging is the key to actually getting it answered.

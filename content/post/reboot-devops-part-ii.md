@@ -5,7 +5,7 @@ draft: false
 tags : [devops, agile]
 ---
 
-In the [Part I](https://blog.raph.ws/2018/07/reboot-devops.html) we discussed how DevOps isn't about solving application problems using infrastructure but about being able to deploy to our targets in a sustainable way. We spoke about how increasing confidence enables personnel to release more often as risks are hedged by having solid application packages.
+In the [Part I](/2018/07/reboot-devops) we discussed how DevOps isn't about solving application problems using infrastructure but about being able to deploy to our targets in a sustainable way. We spoke about how increasing confidence enables personnel to release more often as risks are hedged by having solid application packages.
 
 [![](https://3.bp.blogspot.com/-0lEj-37Cu68/W2fzH5tDW4I/AAAAAAAASzY/xaZqJvM0wSwqHw385xK-K-vlO9qxhcvdwCLcBGAs/s200/Magnifying_glass_01.svg.png)](https://3.bp.blogspot.com/-0lEj-37Cu68/W2fzH5tDW4I/AAAAAAAASzY/xaZqJvM0wSwqHw385xK-K-vlO9qxhcvdwCLcBGAs/s1600/Magnifying_glass_01.svg.png)
 

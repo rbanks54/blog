@@ -12,7 +12,7 @@ Many people who come from command and control working environments have a very l
 *source: [Wiki Commons](https://commons.wikimedia.org/wiki/Main_Page)*
 
 
-[](https://www.blogger.com/null)When working in environments like this that are trying to change for the better. One of the things we can do is say "I don't know".  Of course there are two things that follow this statement. Either stopping and ending the sentence, or continuing by suggesting that the unknown is temporary. For example:  
+When working in environments like this that are trying to change for the better. One of the things we can do is say "I don't know".  Of course there are two things that follow this statement. Either stopping and ending the sentence, or continuing by suggesting that the unknown is temporary. For example:  
 
 "I don't know, but I will learn it"  
 "I don't know now, but I will find out".  

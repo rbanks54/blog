@@ -13,8 +13,7 @@ Every developer has a set of development tools which they use on a regular basis
 
 
 ## [posh-git](https://github.com/dahlbyk/posh-git)
-Git has become the VCS of choice these days, and I have previously advocated that those who use git should primarily use it from the [command line](http://blog.raph.ws/2018/01/git-breaking-get-off-ui.html). It does get annoying after a while doing a git status simply to see which branch you're on, or how far behind you are in respect to your tracking branch. Why I like using the posh-git prompt, is because gives you a representation of your state as part of a console prompt.  
-  
+Git has become the VCS of choice these days, and I have previously advocated that those who use git should primarily use it from the [command line](/2018/01/git-breaking-get-off-the-ui). It does get annoying after a while doing a git status simply to see which branch you're on, or how far behind you are in respect to your tracking branch. Why I like using the posh-git prompt, is because gives you a representation of your state as part of a console prompt.
 
 ## [LINQpad](https://www.linqpad.net/)
 LINQpad is probably one of the best tools out there for C# developers. I use it primarily in a few ways. The first, is using it to communicate with data stores. The second, is using it as a quick way to validate my understanding of framework method calls. Finally, I use it to micro-prototype algorithms I'm writing.  
