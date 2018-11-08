@@ -6,25 +6,22 @@ tags : [data structure revision, computer science, python]
 ---
 
 [GitHub](https://github.com/RaphHaddad/DSRevision)  
-  
+
 So I've found myself in a situation where I have had to revise simple Data Structures from my Software Engineering Degree. I have not done this for several years, so naturally my first step in this process was looking at the workings of various structures on Google (then subsequently Wikipedia). After refreshing my memory, I decided that the best thing to do was code up these algorithm.  
-  
-In this blog post, I will show you the BFS (breadth first search) and the DFS (depth first search) in Python.  
-  
+
+In this blog post, I will show you the BFS (breadth first search) and the DFS (depth first search) in Python.
+
 Unfortunately many of the already Python implementations of these algorithms on the web are either over complicated or have readability issues or don't emphasise the difference between the two algorithms.  
   
 I will attempt to explain both, and give a readable and understandable explanation of both. Targeted towards first year Computer Science or Software Engineering students.  
 Just a small note before I move on. I remember doing this in first year University where we had used Java. It was a nightmare. I programmed this in Python today and it made me think how much more we could've learnt if we used Python at USyd... anyway, here goes!  
 
-  
-
 If you know what stacks and queues are skip the below two paragraphs.
 
-  
-Queue  
+Queue
 A Queue is a computation abstraction of a real-word queue. So, imagine a queue at the movies. The first person to arrive will get served first, the second will get served second etc. Basically a queue is first-come-first-serve. In Computer Science terms, this would be **first-in-first-out**.  
-  
-Stack  
+
+Stack
 A Stack is (guess what) just like a real-world Stack. So, just imagine a bunch of plates being washed. All of them are stacked up after the washing of the plates. Now someone hungry comes (probably me) and wishes to take a plate. He/she would take the first plate on the stack. So basically the last plate added on the stack of plates was the first one to be used. So a stack is, in computer science terms is, **last-in-first-out**.  
   
 A Graph  

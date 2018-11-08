@@ -9,7 +9,7 @@ In this age of in-memory test servers and databases, multi tenancy-first design,
 
 [![](https://2.bp.blogspot.com/-26Q5U7T1vlE/Wj2qQfPwbUI/AAAAAAAAO9I/KqCAZ_W9hiwZjf11J6q_s6EOC1bAO9VIwCLcBGAs/s320/Yebisu_Beer_Museum_tasting_set%255B1%255D.JPG)](https://2.bp.blogspot.com/-26Q5U7T1vlE/Wj2qQfPwbUI/AAAAAAAAO9I/KqCAZ_W9hiwZjf11J6q_s6EOC1bAO9VIwCLcBGAs/s1600/Yebisu_Beer_Museum_tasting_set%255B1%255D.JPG)
 
-A set of beer-units about to be tested | source: [WikiMedia Commons](https://commons.wikimedia.org/)
+* A set of beer-units about to be tested | source: [WikiMedia Commons](https://commons.wikimedia.org/) *
 
   
 [](https://www.blogger.com/null)  

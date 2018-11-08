@@ -6,15 +6,13 @@ tags : [book review]
 ---
 
 _How We Got to Now_ is a book that I can't really put into any individual genre. It isn't a novel, isn't a collection of small stories, isn't purely educational, and isn't historical. It is a combination of all of these genres and that's what makes this book unique and enjoyable.  
-  
-The book _How We Got to Now_ describes, as suggested by its subtitle, "Six Innovations That Made the Modern World". In the introduction Steven Johnson describes evolution and the way one change can trigger a change throughout the course of all of evolution. He also explains various other casualty phenomena to create an overarching point of linkage throughout the whole book. The most notable of these examples is the butterfly effect.  
-  
-  
+
+The book _How We Got to Now_ describes, as suggested by its subtitle, "Six Innovations That Made the Modern World". In the introduction Steven Johnson describes evolution and the way one change can trigger a change throughout the course of all of evolution. He also explains various other casualty phenomena to create an overarching point of linkage throughout the whole book. The most notable of these examples is the butterfly effect.
+
 
 [![](https://3.bp.blogspot.com/-GM_okjc_u9M/WroLGFJixHI/AAAAAAAARJU/JkPU_UwiRmI428rQ9KJCS_cFGV05C5wSgCLcBGAs/s200/20180327_173851.jpg)](https://3.bp.blogspot.com/-GM_okjc_u9M/WroLGFJixHI/AAAAAAAARJU/JkPU_UwiRmI428rQ9KJCS_cFGV05C5wSgCLcBGAs/s1600/20180327_173851.jpg)
 
-  
-  
+
 For each innovation that Steve Johnson explains, he does so using stories, history, and science. He explains the main innovation, then it's children innovations (for example: sound, telephony, speakers). By linking children innovations with the main innovation, he is able to create clear linkages in the reader's mind, so that there is total engagement throughout each innovation he is trying to explain.  
   
 Steven Johnson makes many common observations about the six innovations he highlights. Namely that they trigger a series of other innovations, are placed at a time in history that they may be seen as _inevitable,_ and that the innovators themselves had often worked for a series of several years prior to actually coming up with the innovation. That is: there wasn't really a _lightbulb moment_ for these innovators. Infact, Steve Johnson even highlights that Edison himself didn't really have a _lightbulb_ moment when he came up with the lightbulb!  
