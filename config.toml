@@ -1,4 +1,4 @@
-baseURL = "https://stupefied-fermat-df9625.netlify.com/"
+baseURL = "https://blog.raph.ws/"
 languageCode = "en-us"
 title = "Raph's Blog"
 theme = "kiera"
