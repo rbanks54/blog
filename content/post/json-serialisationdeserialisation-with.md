@@ -2,7 +2,7 @@
 title: 'JSON serialisation/deserialisation with snake_case naming conventions'
 date: 2014-12-02T14:38:00.001+11:00
 draft: false
-tags : [.net, serialisation, json, c#, serialization]
+tags : [.net, serialisation, json, serialization]
 ---
 
 [GitHub (NuGet package source)](https://github.com/RaphHaddad/Newtonsoft.Json.Serialization.ContractResolverExtentions)  
